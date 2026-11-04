@@ -68,7 +68,7 @@
             "title": "Fé na loucura",
             "portrait": "../assets/Singularity/Himeko/Himeko.png",
             "background": "../assets/Singularity/Himeko/background.jpg",
-            "color": "199, 183, 60"
+            "color": "79, 23, 143"
         },
         {
             "id": 8,
@@ -78,47 +78,67 @@
             "title": "DROGA de vida",
             "portrait": "../assets/Singularity/Ayame&Yame/Ayame.jpg",
             "background": "../assets/Singularity/Ayame&Yame/AyameBackground.png",
-            "color": "199, 183, 60"
+            "color": "199, 197, 197"
         },
         {
             "id": 9,
             "firstName": "Yame",
-            "name": "Zyreph Aventure",
-            "rpg": "DumpWorld",
-            "title": "O mestre das moedas / O Harlequin",
-            "portrait": "../assets/DumpWorld/Zyreph/Zyreph.jpg",
-            "background": "../assets/DumpWorld/Zyreph/Background.png",
-            "color": "199, 183, 60"
+            "name": "★★Super Shiny Star Yame-Chan★★",
+            "rpg": "Singularity",
+            "title": "Se este mundo não presta, hora de Recomeçar Agora!!",
+            "portrait": "../assets/Singularity/Ayame&Yame/Yame.jpg",
+            "background": "../assets/Singularity/Ayame&Yame/YameBackground.png",
+            "color": "156, 245, 255"
         },
         {
             "id": 10,
             "firstName": "Ember",
-            "name": "Zyreph Aventure",
-            "rpg": "DumpWorld",
-            "title": "O mestre das moedas / O Harlequin",
-            "portrait": "../assets/DumpWorld/Zyreph/Zyreph.jpg",
-            "background": "../assets/DumpWorld/Zyreph/Background.png",
-            "color": "199, 183, 60"
+            "name": "Ember Scargrave",
+            "rpg": "Singularity",
+            "title": "Mira da morte",
+            "portrait": "../assets/Singularity/Ember/Ember.jpg",
+            "background": "../assets/Singularity/Ember/background.png",
+            "color": "217, 26, 26"
         },
         {
             "id": 11,
             "firstName": "Caelus",
-            "name": "Zyreph Aventure",
+            "name": "Caelus Solaire",
             "rpg": "DumpWorld",
-            "title": "O mestre das moedas / O Harlequin",
-            "portrait": "../assets/DumpWorld/Zyreph/Zyreph.jpg",
-            "background": "../assets/DumpWorld/Zyreph/Background.png",
-            "color": "199, 183, 60"
+            "title": "O brilho do sol",
+            "portrait": "../assets/Singularity/Caelus/Caelus.png",
+            "background": "../assets/Singularity/Caelus/Background.jpg",
+            "color": "235, 211, 75"
         },
         {
             "id": 12,
             "firstName": "Vex",
-            "name": "Zyreph Aventure",
-            "rpg": "DumpWorld",
-            "title": "O mestre das moedas / O Harlequin",
-            "portrait": "../assets/DumpWorld/Zyreph/Zyreph.jpg",
-            "background": "../assets/DumpWorld/Zyreph/Background.png",
-            "color": "199, 183, 60"
+            "name": "Hikaru 'Vex' Kamishiro",
+            "rpg": "Lobotomy",
+            "title": "Em prol do Eternagedom e da Rainha do Ódio",
+            "portrait": "../assets/Lobotomy/Vex/Vex.jpg",
+            "background": "../assets/Lobotomy/Vex/background.png",
+            "color": "96, 108, 240"
+        },
+        {
+            "id": 13,
+            "firstName": "Minami",
+            "name": "Minami Kamura",
+            "rpg": "DemonSlayer",
+            "title": "Sutileza Desvanecedora",
+            "portrait": "../assets/DemonSlayer/Minami/Minami.jpg",
+            "background": "../assets/DemonSlayer/Minami/background.jpg",
+            "color": "140, 52, 227"
+        },
+        {
+            "id": 14,
+            "firstName": "Klaus",
+            "name": "Klaus Adler",
+            "rpg": "DemonSlayer",
+            "title": "Destinado a Vencer",
+            "portrait": "../assets/DemonSlayer/Klaus/Klaus.jpg",
+            "background": "../assets/DemonSlayer/Klaus/background.png",
+            "color": "103, 78, 167"
         }
     ]
 }
