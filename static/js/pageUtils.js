@@ -44,7 +44,6 @@ fetch('../static/data/characters.json')
     })
     .catch((err) => console.error('Erro ao carregar:', err))
 
-
 // ======= Funções =======
 let activeCharacter = 1
 GetActiveCharacter()
