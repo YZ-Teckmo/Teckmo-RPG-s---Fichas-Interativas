@@ -1,0 +1,124 @@
+{
+    "characters": [
+        {
+            "id": 1,
+            "firstName": "Teckmo",
+            "name": "Teckmo 'DumpWorld' Grifford",
+            "rpg": "DumpWorld",
+            "title": "O espírito da determinação",
+            "portrait": "../assets/DumpWorld/Teckmo/portrait.png",
+            "background": "../assets/DumpWorld/Teckmo/background.png",
+            "color": "60, 115, 199"
+        },
+        {
+            "id": 2,
+            "firstName": "Zyreph",
+            "name": "Zyreph Aventure",
+            "rpg": "DumpWorld",
+            "title": "O mestre das moedas / O Harlequin",
+            "portrait": "../assets/DumpWorld/Zyreph/Zyreph.jpg",
+            "background": "../assets/DumpWorld/Zyreph/Background.png",
+            "color": "199, 183, 60"
+        },
+        {
+            "id": 3,
+            "firstName": "Zyreph",
+            "name": "Zyreph Aventure",
+            "rpg": "DumpWorld",
+            "title": "O mestre das moedas / O Harlequin",
+            "portrait": "../assets/DumpWorld/Zyreph/Zyreph.jpg",
+            "background": "../assets/DumpWorld/Zyreph/Background.png",
+            "color": "199, 183, 60"
+        },
+        {
+            "id": 4,
+            "firstName": "Mizuki",
+            "name": "Mizuki Hoshino",
+            "rpg": "DumpWorld",
+            "title": "The Death Bringer",
+            "portrait": "../assets/DumpWorld/Mizuki/Mizuki.jpg",
+            "background": "../assets/DumpWorld/Mizuki/background.jpg",
+            "color": "157, 115, 240"
+        },
+        {
+            "id": 5,
+            "firstName": "Raven",
+            "name": "Raven Nightingale",
+            "rpg": "DumpWorld",
+            "title": "A Não/Existência do meu ser",
+            "portrait": "../assets/DumpWorld/Raven/Raven.jpg",
+            "background": "../assets/DumpWorld/Raven/backrground.jpg",
+            "color": "219, 20, 56"
+        },
+        {
+            "id": 6,
+            "firstName": "Vein",
+            "name": "Vein Serfort",
+            "rpg": "DumpWorld",
+            "title": "O treinador",
+            "portrait": "../assets/DumpWorld/Vein/Vein.jpg",
+            "background": "../assets/DumpWorld/Vein/background.png",
+            "color": "199, 183, 60"
+        },
+        {
+            "id": 7,
+            "firstName": "Himeko",
+            "name": "Himeko Mori",
+            "rpg": "Singularity",
+            "title": "Fé na loucura",
+            "portrait": "../assets/Singularity/Himeko/Himeko.png",
+            "background": "../assets/Singularity/Himeko/background.jpg",
+            "color": "199, 183, 60"
+        },
+        {
+            "id": 8,
+            "firstName": "Ayame",
+            "name": "Ayame Koichi",
+            "rpg": "Singularity",
+            "title": "DROGA de vida",
+            "portrait": "../assets/Singularity/Ayame&Yame/Ayame.jpg",
+            "background": "../assets/Singularity/Ayame&Yame/AyameBackground.png",
+            "color": "199, 183, 60"
+        },
+        {
+            "id": 9,
+            "firstName": "Yame",
+            "name": "Zyreph Aventure",
+            "rpg": "DumpWorld",
+            "title": "O mestre das moedas / O Harlequin",
+            "portrait": "../assets/DumpWorld/Zyreph/Zyreph.jpg",
+            "background": "../assets/DumpWorld/Zyreph/Background.png",
+            "color": "199, 183, 60"
+        },
+        {
+            "id": 10,
+            "firstName": "Ember",
+            "name": "Zyreph Aventure",
+            "rpg": "DumpWorld",
+            "title": "O mestre das moedas / O Harlequin",
+            "portrait": "../assets/DumpWorld/Zyreph/Zyreph.jpg",
+            "background": "../assets/DumpWorld/Zyreph/Background.png",
+            "color": "199, 183, 60"
+        },
+        {
+            "id": 11,
+            "firstName": "Caelus",
+            "name": "Zyreph Aventure",
+            "rpg": "DumpWorld",
+            "title": "O mestre das moedas / O Harlequin",
+            "portrait": "../assets/DumpWorld/Zyreph/Zyreph.jpg",
+            "background": "../assets/DumpWorld/Zyreph/Background.png",
+            "color": "199, 183, 60"
+        },
+        {
+            "id": 12,
+            "firstName": "Vex",
+            "name": "Zyreph Aventure",
+            "rpg": "DumpWorld",
+            "title": "O mestre das moedas / O Harlequin",
+            "portrait": "../assets/DumpWorld/Zyreph/Zyreph.jpg",
+            "background": "../assets/DumpWorld/Zyreph/Background.png",
+            "color": "199, 183, 60"
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+:root {
+    --character-color: 255, 255, 255;
+    --character-background: url('../assets/MainPages/Background.jpg');
+    --next-background: url('../assets/MainPages/Background.jpg');
+}
+
+body {
+    background: var(--character-background) no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 98.6vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: var(--next-background);
+    background-position: center;
+    background-size: cover;
+    min-height: 98.6vh;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body.newBack::before {
+    opacity: 1;
+}
+
+.nav {
+    width: 90%;
+    height: 60px;
+    margin-left: 5%;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 3px solid rgba(var(--character-color), 0.2);
+    box-shadow: 0 0 20px rgba(182, 66, 66, 0.3);
+    backdrop-filter: blur(20px);
+    align-items: center;
+    display: flex;
+    transition: border-color 0.3s ease;
+}
+
+.character-button {
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 3px solid rgba(var(--character-color), 0.3);
+    overflow: hidden;
+}
+
+.selected-character-button {
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+}
+
+.icon {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+/*
+.character-name-popup {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+}
+*/
+
+.character-button:hover .character-name-popup {
+    visibility: visible;
+    opacity: 1;
+}
