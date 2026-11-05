@@ -151,11 +151,15 @@ carouselHandler.addEventListener('wheel', (evt) => {
     carouselHandler.scrollBy({ left: evt.deltaY * 1.2, behavior: 'smooth' })
 }, { passive: false })
 
-curGauge.addEventListener('keydown', function (event) {
-    if (event.key === 'Enter') {
-        ReleaseGauge()
-    }
-})
+if (curGauge == null) {
+}
+else {
+    curGauge.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            ReleaseGauge()
+        }
+    })
+}
 
 // ======= Personagens =======
 // Saindo do Arquivo Json
