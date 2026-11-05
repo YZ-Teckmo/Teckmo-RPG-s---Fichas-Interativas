@@ -43,7 +43,17 @@ body.newBack::before {
     transition: border-color 0.3s ease;
 }
 
+.carousel {
+    height: 100%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}   
+
 .character-button {
+    flex: 0 0 50px;
     width: 50px;
     height: 50px;
     margin: 2px;
@@ -54,8 +64,8 @@ body.newBack::before {
 }
 
 .selected-character-button {
-    width: 50px;
-    height: 50px;
+    width: 0 0 50px;
+    height: 0 0 50px;
     margin: 2px;
     margin-left: 10px;
     border-radius: 50%;
@@ -75,7 +85,7 @@ body.newBack::before {
     transform: scale(1.2);
 }
 
-/*
+
 .character-name-popup {
     visibility: hidden;
     opacity: 0;
@@ -84,18 +94,19 @@ body.newBack::before {
     padding: 8px 0;
     border-radius: 4px;
     position: absolute;
-    top: 100%;
+    top: 30%;
     left: 0;
     margin-top: 5px;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 10;
 }
-*/
+
 
 .character-button:hover .character-name-popup {
     visibility: visible;
     opacity: 1;
 }
+
 
 .main-char {
     width: 98%;
@@ -127,7 +138,8 @@ body.newBack::before {
     margin-top: 20px;
     margin-right: 20px;
     margin-left: 150px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -138,10 +150,55 @@ body.newBack::before {
     border: 3px solid rgba(var(--character-color), 0.2);
     overflow: hidden;
     margin-top: 10px;
-    margin-left: 30%;
 }
 
 .foto {
     width: 100%;
     object-fit: cover;
+}
+
+.name {
+    width: 100%;
+    margin: 0px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.title {
+    width: 100%;
+    margin: 0px;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+}
+
+.song-div {
+    width: 80%;
+    height: 30px;
+    border-radius: 50px;
+    border: 3px solid rgba(var(--character-color), 0.2);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.yt-icon {
+    width: 22px;
+    height: 15px;
+    margin: 5px;
+}
+
+.bar {
+    height: 80%;
+    width: 2px;
+    border: 2px solid rgba(var(--character-color), 0.2);
+}
+
+.songName {
+    width: 100%;
+    margin: 0px;
+    margin-top: 1px;
+    margin-left: 10px;
+    font-size: 14px;
+    text-align: left;
 }

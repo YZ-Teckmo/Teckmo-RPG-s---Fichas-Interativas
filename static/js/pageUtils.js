@@ -1,5 +1,10 @@
 // ======= HTML imports =======
-const root = document.documentElement;
+const root = document.documentElement
+const nameHandler = document.getElementById("nameHandler")
+const titleHandler = document.getElementById("titleHandler")
+const portraitHandler = document.getElementById("portraitHandler")
+const songNameHandler = document.getElementById("songNameHandler")
+const carouselHandler = document.getElementById("carouselHandler")
 
 // ======= Variaveis =======
 let transition = false
@@ -31,6 +36,11 @@ class ThemeSong {
     }
 }
 
+// ======= Execuções Básicas =======
+carouselHandler.addEventListener('wheel', (evt) => {
+    evt.preventDefault()
+    carouselHandler.scrollBy({left: evt.deltaY * 0.2, behavior: 'smooth'})
+}, { passive: false })
 
 // ======= Personagens =======
 // Saindo do Arquivo Json
@@ -52,6 +62,10 @@ function GetActiveCharacter() {
         if (character.id === activeCharacter) {
             document.title = character.firstName + " - " + character.rpg + " | Deyvid Fichas de RPG"
             root.style.setProperty('--character-color', character.color)
+            songNameHandler.innerText = character.themeSong.name
+            portraitHandler.src = character.portrait
+            nameHandler.innerText = character.name
+            titleHandler.innerText = `"${character.title}"`
             ChangeBackground(character.background)
         }
     }

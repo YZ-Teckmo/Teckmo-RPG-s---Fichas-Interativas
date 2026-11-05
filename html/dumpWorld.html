@@ -18,34 +18,36 @@
 <body>
     <header>
         <nav class="nav">
-            <div class="character-button">
-                <img class="icon" src="../static/assets/DumpWorld/Teckmo/Teckmo.png" alt="Teckmo"
-                    onclick="ChangeActiveCharacter(1)">
-                <div class="character-name-popup">Teckmo</div>
-            </div>
-            <div class="character-button">
-                <img class="icon" src="../static/assets/DumpWorld/Zyreph/Zyreph.jpg" alt="Zyreph"
-                    onclick="ChangeActiveCharacter(2)">
-                <div class="character-name-popup">Zyreph</div>
-            </div>
-            <div class="character-button">
-                <img class="icon" src="../static/assets/DumpWorld/Kyara&Zeckrom/Zeckrom&Kyara.jpg" alt="Kyara&Zeckrom">
-                <div class="character-name-popup">Kyara&Zeckrom</div>
-            </div>
-            <div class="character-button">
-                <img class="icon" src="../static/assets/DumpWorld/Mizuki/Mizuki.jpg" alt="Mizuki"
-                    onclick="ChangeActiveCharacter(4)">
-                <div class="character-name-popup">Mizuki</div>
-            </div>
-            <div class="character-button">
-                <img class="icon" src="../static/assets/DumpWorld/Raven/Raven.jpg" alt="Raven"
-                    onclick="ChangeActiveCharacter(5)">
-                <div class="character-name-popup">Raven</div>
-            </div>
-            <div class="character-button">
-                <img class="icon" src="../static/assets/DumpWorld/Vein/Vein.jpg" alt="Vein"
-                    onclick="ChangeActiveCharacter(6)">
-                <div class="character-name-popup">Vein</div>
+            <div class="carousel" id="carouselHandler" style="width: 60%;">
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/DumpWorld/Teckmo/Teckmo.png" alt="Teckmo"
+                        onclick="ChangeActiveCharacter(1)">
+                    <div class="character-name-popup">Teckmo</div>
+                </div>
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/DumpWorld/Zyreph/Zyreph.jpg" alt="Zyreph"
+                        onclick="ChangeActiveCharacter(2)">
+                    <div class="character-name-popup">Zyreph</div>
+                </div>
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/DumpWorld/Kyara&Zeckrom/Zeckrom&Kyara.jpg" alt="Kyara&Zeckrom">
+                    <div class="character-name-popup">Kyara&Zeckrom</div>
+                </div>
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/DumpWorld/Mizuki/Mizuki.jpg" alt="Mizuki"
+                        onclick="ChangeActiveCharacter(4)">
+                    <div class="character-name-popup">Mizuki</div>
+                </div>
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/DumpWorld/Raven/Raven.jpg" alt="Raven"
+                        onclick="ChangeActiveCharacter(5)">
+                    <div class="character-name-popup">Raven</div>
+                </div>
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/DumpWorld/Vein/Vein.jpg" alt="Vein"
+                        onclick="ChangeActiveCharacter(6)">
+                    <div class="character-name-popup">Vein</div>
+                </div>
             </div>
         </nav>
     </header>
@@ -56,8 +58,13 @@
         </div>
         <div class="char-info">
             <div class="portrait">
-                <img class="foto" src="../static/assets/DumpWorld/Teckmo/Teckmo.png" alt="">
-                <h1>Teckmo</h1>
+                <img class="foto" id="portraitHandler" src="../static/assets/MainPages/character.png" alt="">
+            </div>
+            <h1 class="name" id="nameHandler">???</h1>
+            <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
+            <div class="song-div">
+                    <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt=""> <div class="bar"></div>
+                    <h1 class="songName" id="songNameHandler">???</h1>
             </div>
         </div>
     </div>

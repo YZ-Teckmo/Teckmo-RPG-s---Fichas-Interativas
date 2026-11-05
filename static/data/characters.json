@@ -6,19 +6,27 @@
             "name": "Teckmo 'DumpWorld' Grifford",
             "rpg": "DumpWorld",
             "title": "O espírito da determinação",
-            "portrait": "../assets/DumpWorld/Teckmo/portrait.png",
+            "portrait": "../static/assets/DumpWorld/Teckmo/Teckmo.png",
             "background": "../assets/DumpWorld/Teckmo/background.png",
-            "color": "60, 115, 199"
-        },
+            "color": "60, 115, 199",
+            "themeSong": {
+                "name": "Hopes and Dreams | TobyFox",
+                "link": "https://youtu.be/wbO3p7_Mf30?si=-byuD1YawQ1Wjx-z"
+            }
+        },  
         {
             "id": 2,
             "firstName": "Zyreph",
             "name": "Zyreph Aventure",
             "rpg": "DumpWorld",
             "title": "O mestre das moedas / O Harlequin",
-            "portrait": "../assets/DumpWorld/Zyreph/Zyreph.jpg",
+            "portrait": "../static/assets/DumpWorld/Zyreph/Zyreph.jpg",
             "background": "../assets/DumpWorld/Zyreph/Background.png",
-            "color": "199, 183, 60"
+            "color": "199, 183, 60",
+            "themeSong": {
+                "name": "Mr. Showtime | Hitoshizuku",
+                "link": "https://youtu.be/-W8WjGJYASw?si=ouLb8YTaWsRoKpFs"
+            }
         },
         {
             "id": 3,
@@ -26,9 +34,13 @@
             "name": "Zyreph Aventure",
             "rpg": "DumpWorld",
             "title": "O mestre das moedas / O Harlequin",
-            "portrait": "../assets/DumpWorld/Zyreph/Zyreph.jpg",
+            "portrait": "../static/assets/DumpWorld/Zyreph/Zyreph.jpg",
             "background": "../assets/DumpWorld/Zyreph/Background.png",
-            "color": "199, 183, 60"
+            "color": "199, 183, 60",
+            "themeSong": {
+                "name": "Hopes and Dreams | TobyFox",
+                "link": "https://youtu.be/wbO3p7_Mf30?si=-byuD1YawQ1Wjx-z"
+            }
         },
         {
             "id": 4,
@@ -36,9 +48,13 @@
             "name": "Mizuki Hoshino",
             "rpg": "DumpWorld",
             "title": "The Death Bringer",
-            "portrait": "../assets/DumpWorld/Mizuki/Mizuki.jpg",
+            "portrait": "../static/assets/DumpWorld/Mizuki/Mizuki.jpg",
             "background": "../assets/DumpWorld/Mizuki/background.jpg",
-            "color": "157, 115, 240"
+            "color": "157, 115, 240",
+            "themeSong": {
+                "name": "Bake no Hana | Nakiso",
+                "link": "https://youtu.be/B3C_VB8b2So?si=vOvGjqq8SBoMaE0F"
+            }
         },
         {
             "id": 5,
@@ -46,9 +62,13 @@
             "name": "Raven Nightingale",
             "rpg": "DumpWorld",
             "title": "A Não/Existência do meu ser",
-            "portrait": "../assets/DumpWorld/Raven/Raven.jpg",
+            "portrait": "../static/assets/DumpWorld/Raven/Raven.jpg",
             "background": "../assets/DumpWorld/Raven/backrground.jpg",
-            "color": "219, 20, 56"
+            "color": "219, 20, 56",
+            "themeSong": {
+                "name": "Confession | Naisho no Piasu",
+                "link": "https://youtu.be/Ficg3iAOUp8?si=AoC3mYn3e0rAaem-"
+            }
         },
         {
             "id": 6,
@@ -56,9 +76,13 @@
             "name": "Vein Serfort",
             "rpg": "DumpWorld",
             "title": "O treinador",
-            "portrait": "../assets/DumpWorld/Vein/Vein.jpg",
+            "portrait": "../static/assets/DumpWorld/Vein/Vein.jpg",
             "background": "../assets/DumpWorld/Vein/background.png",
-            "color": "199, 183, 60"
+            "color": "199, 183, 60",
+            "themeSong": {
+                "name": "Glitter in the Sky | Noah",
+                "link": "https://youtu.be/Q44sWuCh0yE?si=jPp9RGxM6kJv6gfW"
+            }
         },
         {
             "id": 7,
@@ -66,9 +90,13 @@
             "name": "Himeko Mori",
             "rpg": "Singularity",
             "title": "Fé na loucura",
-            "portrait": "../assets/Singularity/Himeko/Himeko.png",
+            "portrait": "../static/assets/Singularity/Himeko/Himeko.png",
             "background": "../assets/Singularity/Himeko/background.jpg",
-            "color": "79, 23, 143"
+            "color": "79, 23, 143",
+            "themeSong": {
+                "name": "X - Hexatombe | Raging Sea",
+                "link": "https://youtu.be/e96-RPc9meI?si=U6J-4_K1lMCXC-iM"
+            }
         },
         {
             "id": 8,
@@ -76,9 +104,13 @@
             "name": "Ayame Koichi",
             "rpg": "Singularity",
             "title": "DROGA de vida",
-            "portrait": "../assets/Singularity/Ayame&Yame/Ayame.jpg",
+            "portrait": "../static/assets/Singularity/Ayame&Yame/Ayame.jpg",
             "background": "../assets/Singularity/Ayame&Yame/AyameBackground.png",
-            "color": "199, 197, 197"
+            "color": "199, 197, 197",
+            "themeSong": {
+                "name": "Propose | Naisho no Piasu",
+                "link": "https://youtu.be/SIiHOrmTiOs?si=Xx0mgNjVRdFXPFxg"
+            }
         },
         {
             "id": 9,
@@ -86,9 +118,13 @@
             "name": "★★Super Shiny Star Yame-Chan★★",
             "rpg": "Singularity",
             "title": "Se este mundo não presta, hora de Recomeçar Agora!!",
-            "portrait": "../assets/Singularity/Ayame&Yame/Yame.jpg",
+            "portrait": "../static/assets/Singularity/Ayame&Yame/Yame.jpg",
             "background": "../assets/Singularity/Ayame&Yame/YameBackground.png",
-            "color": "156, 245, 255"
+            "color": "156, 245, 255",
+            "themeSong": {
+                "name": "Retry Now | Nakiso",
+                "link": "https://youtu.be/9RcPJBj0nFY?si=AoaQLi6ZW3IW8gGc"
+            }
         },
         {
             "id": 10,
@@ -96,9 +132,13 @@
             "name": "Ember Scargrave",
             "rpg": "Singularity",
             "title": "Mira da morte",
-            "portrait": "../assets/Singularity/Ember/Ember.jpg",
+            "portrait": "../static/assets/Singularity/Ember/Ember.jpg",
             "background": "../assets/Singularity/Ember/background.png",
-            "color": "217, 26, 26"
+            "color": "217, 26, 26",
+            "themeSong": {
+                "name": "Fire!! | Jamie Paige",
+                "link": "https://youtu.be/z_Lf71aI0Ng?si=lSfoIbIThTtTiuFc"
+            }
         },
         {
             "id": 11,
@@ -106,9 +146,13 @@
             "name": "Caelus Solaire",
             "rpg": "DumpWorld",
             "title": "O brilho do sol",
-            "portrait": "../assets/Singularity/Caelus/Caelus.png",
+            "portrait": "../static/assets/Singularity/Caelus/Caelus.png",
             "background": "../assets/Singularity/Caelus/Background.jpg",
-            "color": "235, 211, 75"
+            "color": "235, 211, 75",
+            "themeSong": {
+                "name": "CATaclysm | BitFox",
+                "link": "https://youtu.be/A5THcAb2jLU?si=Q78iIVohUHs26cwM"
+            }
         },
         {
             "id": 12,
@@ -116,9 +160,13 @@
             "name": "Hikaru 'Vex' Kamishiro",
             "rpg": "Lobotomy",
             "title": "Em prol do Eternagedom e da Rainha do Ódio",
-            "portrait": "../assets/Lobotomy/Vex/Vex.jpg",
+            "portrait": "../static/assets/Lobotomy/Vex/Vex.jpg",
             "background": "../assets/Lobotomy/Vex/background.png",
-            "color": "96, 108, 240"
+            "color": "96, 108, 240",
+            "themeSong": {
+                "name": "It Go | AnswearingMachine",
+                "link": "https://youtu.be/FAIz9Ok4JSs?si=RmbiuJauhgWBIcLZ"
+            }
         },
         {
             "id": 13,
@@ -126,9 +174,13 @@
             "name": "Minami Kamura",
             "rpg": "DemonSlayer",
             "title": "Sutileza Desvanecedora",
-            "portrait": "../assets/DemonSlayer/Minami/Minami.jpg",
+            "portrait": "../static/assets/DemonSlayer/Minami/Minami.jpg",
             "background": "../assets/DemonSlayer/Minami/background.jpg",
-            "color": "140, 52, 227"
+            "color": "140, 52, 227",
+            "themeSong": {
+                "name": "Nenhuma",
+                "link": ""
+            }
         },
         {
             "id": 14,
@@ -136,9 +188,13 @@
             "name": "Klaus Adler",
             "rpg": "DemonSlayer",
             "title": "Destinado a Vencer",
-            "portrait": "../assets/DemonSlayer/Klaus/Klaus.jpg",
+            "portrait": "../static/assets/DemonSlayer/Klaus/Klaus.jpg",
             "background": "../assets/DemonSlayer/Klaus/background.png",
-            "color": "103, 78, 167"
+            "color": "103, 78, 167",
+            "themeSong": {
+                "name": "Nenhuma",
+                "link": ""
+            }
         }
     ]
 }
