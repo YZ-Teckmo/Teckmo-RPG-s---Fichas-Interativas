@@ -120,6 +120,10 @@
             "themeSong": {
                 "name": "X - Hexatombe | Raging Sea",
                 "link": "https://youtu.be/e96-RPc9meI?si=U6J-4_K1lMCXC-iM"
+            },
+            "blessing": {
+                "name": "Nenhuma",
+                "color": "Branca"
             }
         },
         {
@@ -134,6 +138,10 @@
             "themeSong": {
                 "name": "Propose | Naisho no Piasu",
                 "link": "https://youtu.be/SIiHOrmTiOs?si=Xx0mgNjVRdFXPFxg"
+            },
+            "blessing": {
+                "name": "???",
+                "color": "???"
             }
         },
         {
@@ -148,6 +156,10 @@
             "themeSong": {
                 "name": "Retry Now | Nakiso",
                 "link": "https://youtu.be/9RcPJBj0nFY?si=AoaQLi6ZW3IW8gGc"
+            },
+            "blessing": {
+                "name": "???",
+                "color": "???"
             }
         },
         {
@@ -162,13 +174,17 @@
             "themeSong": {
                 "name": "Fire!! | Jamie Paige",
                 "link": "https://youtu.be/z_Lf71aI0Ng?si=lSfoIbIThTtTiuFc"
+            },
+            "blessing": {
+                "name": "Phantom Arsenal",
+                "color": "Vermelha"
             }
         },
         {
             "id": 11,
             "firstName": "Caelus",
             "name": "Caelus Solaire",
-            "rpg": "DumpWorld",
+            "rpg": "Singularity",
             "title": "O brilho do sol",
             "portrait": "../static/assets/Singularity/Caelus/Caelus.png",
             "background": "../assets/Singularity/Caelus/Background.jpg",
@@ -176,6 +192,10 @@
             "themeSong": {
                 "name": "CATaclysm | BitFox",
                 "link": "https://youtu.be/A5THcAb2jLU?si=Q78iIVohUHs26cwM"
+            },
+            "blessing": {
+                "name": "HeavenLock",
+                "color": "Amarela"
             }
         },
         {
@@ -190,6 +210,10 @@
             "themeSong": {
                 "name": "It Go | AnswearingMachine",
                 "link": "https://youtu.be/FAIz9Ok4JSs?si=RmbiuJauhgWBIcLZ"
+            },
+            "lobInfo": {
+                "nacionality": "MultiCrack Office",
+                "corp": "W Corporation"
             }
         },
         {

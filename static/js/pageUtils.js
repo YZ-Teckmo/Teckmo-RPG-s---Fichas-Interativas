@@ -8,6 +8,10 @@ const carouselHandler = document.getElementById("carouselHandler")
 const navNameHandler = document.getElementById("navNameHandler")
 const absoluteNameHandler = document.getElementById("absoluteNameHandler")
 const absoluteTypeHandler = document.getElementById("absoluteTypeHandler")
+const blessingNameHandler = document.getElementById("blessingNameHandler")
+const blessingColorHandler = document.getElementById("blessingColorHandler")
+const nacionalityHandler = document.getElementById("nacionalityHandler")
+const corpHandler = document.getElementById("corpHandler")
 
 // ======= Variaveis =======
 let transition = false
@@ -27,6 +31,7 @@ class Character {
         this.themeSong = new ThemeSong()
 
         if (rpg == 'Singularity') {
+            this.blessing = new Blessing()
             this.stats = new SingularityStats()
         }
         else if (rpg == 'DumpWorld') {
@@ -34,6 +39,7 @@ class Character {
             this.stats = new DumpWorldStats()
         }
         else if (rpg == 'Lobotomy') {
+            this.lobInfo = new LobInfo()
             this.stats = new LobotomyStats()
         }
         else {
@@ -115,6 +121,20 @@ class Absolute {
     }
 }
 
+class Blessing {
+    constructor(name, color) {
+        this.name = name
+        this.color = color
+    }
+}
+
+class LobInfo {
+    constructor(nacionality, corp) {
+        this.nacionality = nacionality
+        this.corp = corp
+    }
+}
+
 class ThemeSong {
     constructor(name, link) {
         this.name = name
@@ -152,8 +172,22 @@ function GetActiveCharacter() {
             portraitHandler.src = character.portrait
             nameHandler.innerText = character.name
             titleHandler.innerText = `"${character.title}"`
-            absoluteNameHandler.innerText = "Absoluto: " + character.absolute.name
-            absoluteTypeHandler.innerText = "Tipo: " + character.absolute.type
+
+            if (character.rpg === "DumpWorld") {
+                absoluteNameHandler.innerText = "Absoluto: " + character.absolute.name
+                absoluteTypeHandler.innerText = "Tipo: " + character.absolute.type
+            }
+
+            if (character.rpg === "Singularity") {
+                blessingNameHandler.innerText = "Benção: " + character.blessing.name
+                blessingColorHandler.innerText = "Cor: " + character.blessing.color
+            }
+
+            if (character.rpg === "Lobotomy") {
+                nacionalityHandler.innerText = "Nacionalidade: " + character.lobInfo.nacionality
+                corpHandler.innerText = "Corporação: " + character.lobInfo.corp
+            }
+
             ChangeBackground(character.background)
         }
     }
