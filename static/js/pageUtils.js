@@ -12,6 +12,9 @@ const blessingNameHandler = document.getElementById("blessingNameHandler")
 const blessingColorHandler = document.getElementById("blessingColorHandler")
 const nacionalityHandler = document.getElementById("nacionalityHandler")
 const corpHandler = document.getElementById("corpHandler")
+const curGauge = document.getElementById("curGauge")
+const maxGauge = document.getElementById("maxGauge")
+const barGauge = document.getElementById("barGauge")
 
 // ======= Variaveis =======
 let transition = false
@@ -148,6 +151,12 @@ carouselHandler.addEventListener('wheel', (evt) => {
     carouselHandler.scrollBy({ left: evt.deltaY * 1.2, behavior: 'smooth' })
 }, { passive: false })
 
+curGauge.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        ReleaseGauge()
+    }
+})
+
 // ======= Personagens =======
 // Saindo do Arquivo Json
 fetch('../static/data/characters.json')
@@ -218,4 +227,27 @@ function ChangeBackground(background) {
         document.body.classList.remove('newBack')
     }, 300)
     transition = false
+}
+
+function CalcGauge() {
+    let gaugePercent = (curGauge.value / maxGauge.value) * 100
+    barGauge.style.width = gaugePercent + "%"
+}
+
+function ReleaseGauge() {
+    if (barGauge.width <= "100%") {
+        root.style.setProperty("--spirit-on", "0")
+    }
+    else if (barGauge.width >= "100%" && barGauge.width <= "200%") {
+        root.style.setProperty("--spirit-on", "1")
+        root.style.setProperty("--gauge-fill", `url("../assets/DemonSlayer/Klaus/SpiritGauge/Fill1.png")`)
+    }
+    else if (barGauge.width >= "200%" && barGauge.width <= "300%") {
+        root.style.setProperty("--spirit-on", "1")
+        root.style.setProperty("--gauge-fill", `url("../assets/DemonSlayer/Klaus/SpiritGauge/Fill2.png")`)
+    }
+    else {
+        root.style.setProperty("--spirit-on", "1")
+        root.style.setProperty("--gauge-fill", `url("../assets/DemonSlayer/Klaus/SpiritGauge/Fill3.png")`)
+    }
 }

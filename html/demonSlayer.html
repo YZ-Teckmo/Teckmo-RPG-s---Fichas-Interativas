@@ -40,16 +40,63 @@
         <div class="char-status">
 
         </div>
-        <div class="char-info">
-            <div class="portrait">
-                <img class="foto" id="portraitHandler" src="../static/assets/MainPages/character.png" alt="">
+        <div class="char-right">
+            <div class="char-info">
+                <div class="portrait">
+                    <img class="foto" id="portraitHandler" src="../static/assets/MainPages/character.png" alt="">
+                </div>
+                <h1 class="name" id="nameHandler">???</h1>
+                <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
+                <div class="song-div">
+                    <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt="">
+                    <div class="bar"></div>
+                    <h1 class="songName" id="songNameHandler">???</h1>
+                </div>
             </div>
-            <h1 class="name" id="nameHandler">???</h1>
-            <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
-            <div class="song-div">
-                <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt="">
-                <div class="bar"></div>
-                <h1 class="songName" id="songNameHandler">???</h1>
+            <div class="char-main-stats">
+                <h1>Status</h1>
+                <div>
+                    <h1 class="bar-title">Vida</h1>
+                    <div class="bar-container">
+                        <div class="bar-fill-health"></div>
+                        <div class="bar-text">
+                            <input class="current-pos" type="number">
+                            /
+                            <input class="max-pos" type="number">
+                        </div>
+                    </div>
+
+                    <h1 class="bar-title">Estamina</h1>
+                    <div class="bar-container">
+                        <div class="bar-fill-stamina"></div>
+                        <div class="bar-text">
+                            <input class="current-ene" type="number">
+                            /
+                            <input class="max-ene" type="number">
+                        </div>
+                    </div>
+
+                    <h1 class="bar-title">Sanidade</h1>
+                    <div class="bar-container">
+                        <div class="bar-fill-sanity"></div>
+                        <div class="bar-text">
+                            <input class="current-ene" type="number">
+                            /
+                            <input class="max-ene" type="number">
+                        </div>
+                    </div>
+
+                    <h1 class="bar-title">Medidor Espiritual</h1>
+                    <div class="bar-container-gauge">
+                        <div class="bar-text">
+                            <input class="current-ene" id="curGauge" oninput="CalcGauge()" type="number">
+                            /
+                            <input class="max-ene" id="maxGauge" oninput="CalcGauge()" type="number">
+                        </div>
+                        <div class="bar-fill-gauge" id="barGauge"></div>
+                        <div class="bar-container-fill"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
