@@ -12,8 +12,12 @@
             "themeSong": {
                 "name": "Hopes and Dreams | TobyFox",
                 "link": "https://youtu.be/wbO3p7_Mf30?si=-byuD1YawQ1Wjx-z"
+            },
+            "absolute": {
+                "name": "Vazio",
+                "type": "Vazio"
             }
-        },  
+        },
         {
             "id": 2,
             "firstName": "Zyreph",
@@ -26,12 +30,16 @@
             "themeSong": {
                 "name": "Mr. Showtime | Hitoshizuku",
                 "link": "https://youtu.be/-W8WjGJYASw?si=ouLb8YTaWsRoKpFs"
+            },
+            "absolute": {
+                "name": "Sorte",
+                "type": "Interno"
             }
         },
         {
             "id": 3,
-            "firstName": "Zyreph",
-            "name": "Zyreph Aventure",
+            "firstName": "Zeckrom & Kyara",
+            "name": "Zeckrom & Kyara",
             "rpg": "DumpWorld",
             "title": "O mestre das moedas / O Harlequin",
             "portrait": "../static/assets/DumpWorld/Zyreph/Zyreph.jpg",
@@ -40,6 +48,10 @@
             "themeSong": {
                 "name": "Hopes and Dreams | TobyFox",
                 "link": "https://youtu.be/wbO3p7_Mf30?si=-byuD1YawQ1Wjx-z"
+            },
+            "absolute": {
+                "name": "Vazio",
+                "type": "Vazio"
             }
         },
         {
@@ -54,6 +66,10 @@
             "themeSong": {
                 "name": "Bake no Hana | Nakiso",
                 "link": "https://youtu.be/B3C_VB8b2So?si=vOvGjqq8SBoMaE0F"
+            },
+            "absolute": {
+                "name": "Vazio",
+                "type": "Vazio"
             }
         },
         {
@@ -68,6 +84,10 @@
             "themeSong": {
                 "name": "Confession | Naisho no Piasu",
                 "link": "https://youtu.be/Ficg3iAOUp8?si=AoC3mYn3e0rAaem-"
+            },
+            "absolute": {
+                "name": "Superposição",
+                "type": "???"
             }
         },
         {
@@ -82,6 +102,10 @@
             "themeSong": {
                 "name": "Glitter in the Sky | Noah",
                 "link": "https://youtu.be/Q44sWuCh0yE?si=jPp9RGxM6kJv6gfW"
+            },
+            "absolute": {
+                "name": "Treino",
+                "type": "Externo"
             }
         },
         {

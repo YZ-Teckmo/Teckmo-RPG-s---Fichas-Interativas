@@ -12,13 +12,26 @@
 <body>
     <header>
         <nav class="nav">
-            <div class="character-button">
-                <img class="icon" src="../static/assets/Lobotomy/Vex/Vex.jpg" alt="Vex"
-                    onclick="ChangeActiveCharacter(12)">
-                <div class="character-name-popup">Vex</div>
+            <div class="carousel" id="carouselHandler" style="width: 8%;">
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/Lobotomy/Vex/Vex.jpg" alt="Vex"
+                        onclick="ChangeActiveCharacter(12)" onmouseover="GetCharacterName(12)">
+                    <div class="character-name-popup">Vex</div>
+                </div>
+            </div>
+            <div class="bar"></div>
+            <div class="right-container" style="width: 77%;">
+                <h1 class="nav-name" id="navNameHandler">???</h1>
+            </div>
+            <div class="bar"></div>
+            <div class="exit-div">
+                <a href="../index.html">
+                    <h1>Voltar</h1>
+                </a>
+            </div>
         </nav>
     </header>
-   
+
     <div class="main-char">
         <div class="char-status">
 
@@ -30,12 +43,13 @@
             <h1 class="name" id="nameHandler">???</h1>
             <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
             <div class="song-div">
-                    <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt=""> <div class="bar"></div>
-                    <h1 class="songName" id="songNameHandler">???</h1>
+                <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt="">
+                <div class="bar"></div>
+                <h1 class="songName" id="songNameHandler">???</h1>
             </div>
         </div>
     </div>
-    
+
 </body>
 
 <script src="../static/js/pageUtils.js"></script>

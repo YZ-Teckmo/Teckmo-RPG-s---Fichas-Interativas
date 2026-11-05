@@ -12,85 +12,98 @@
 <body>
     <header>
         <nav class="nav">
-            <div class="carousel" id="carouselHandler" style="width: 38%;">
+            <div class="carousel" id="carouselHandler" style="width: 40%;">
                 <div class="character-button">
                     <img class="icon" src="../static/assets/DumpWorld/Teckmo/Teckmo.png" alt="Teckmo"
-                        onclick="ChangeActiveCharacter(1)">
+                        onclick="ChangeActiveCharacter(1)" onmouseover="GetCharacterName(1)">
                 </div>
                 <div class="character-button">
                     <img class="icon" src="../static/assets/DumpWorld/Zyreph/Zyreph.jpg" alt="Zyreph"
-                        onclick="ChangeActiveCharacter(2)">
+                        onclick="ChangeActiveCharacter(2)" onmouseover="GetCharacterName(2)">
                 </div>
                 <div class="character-button">
-                    <img class="icon" src="../static/assets/DumpWorld/Kyara&Zeckrom/Zeckrom&Kyara.jpg" alt="Kyara&Zeckrom">
+                    <img class="icon" src="../static/assets/DumpWorld/Kyara&Zeckrom/Zeckrom&Kyara.jpg"
+                        alt="Kyara&Zeckrom" onmouseover="GetCharacterName(3)">
                 </div>
                 <div class="character-button">
                     <img class="icon" src="../static/assets/DumpWorld/Mizuki/Mizuki.jpg" alt="Mizuki"
-                        onclick="ChangeActiveCharacter(4)">
+                        onclick="ChangeActiveCharacter(4)" onmouseover="GetCharacterName(4)">
                 </div>
                 <div class="character-button">
                     <img class="icon" src="../static/assets/DumpWorld/Raven/Raven.jpg" alt="Raven"
-                        onclick="ChangeActiveCharacter(5)">
+                        onclick="ChangeActiveCharacter(5)" onmouseover="GetCharacterName(5)">
                 </div>
                 <div class="character-button">
                     <img class="icon" src="../static/assets/DumpWorld/Vein/Vein.jpg" alt="Vein"
-                        onclick="ChangeActiveCharacter(6)">
+                        onclick="ChangeActiveCharacter(6)" onmouseover="GetCharacterName(6)">
                 </div>
                 <div class="character-button">
                     <img class="icon" src="../static/assets/Singularity/Himeko/Himeko.png" alt="Himeko"
-                        onclick="ChangeActiveCharacter(7)">
+                        onclick="ChangeActiveCharacter(7)" onmouseover="GetCharacterName(7)">
                 </div>
                 <div class="character-button">
                     <img class="icon" src="../static/assets/Singularity/Ayame&Yame/Ayame.jpg" alt="Ayame"
-                        onclick="ChangeActiveCharacter(8)">
+                        onclick="ChangeActiveCharacter(8)" onmouseover="GetCharacterName(8)">
                 </div>
                 <div class="character-button">
                     <img class="icon" src="../static/assets/Singularity/Ayame&Yame/Yame.jpg" alt="Yame"
-                        onclick="ChangeActiveCharacter(9)">>
+                        onclick="ChangeActiveCharacter(9)" onmouseover="GetCharacterName(9)">
                 </div>
                 <div class="character-button">
                     <img class="icon" src="../static/assets/Singularity/Ember/Ember.jpg" alt="Ember"
-                        onclick="ChangeActiveCharacter(10)">
+                        onclick="ChangeActiveCharacter(10)" onmouseover="GetCharacterName(10)">
                 </div>
                 <div class="character-button">
                     <img class="icon" src="../static/assets/Singularity/Caelus/Caelus.png" alt="Caelus"
-                        onclick="ChangeActiveCharacter(11)">
+                        onclick="ChangeActiveCharacter(11)" onmouseover="GetCharacterName(11)">
                 </div>
                 <div class="character-button">
                     <img class="icon" src="../static/assets/Lobotomy/Vex/Vex.jpg" alt="Vex"
-                        onclick="ChangeActiveCharacter(12)">
+                        onclick="ChangeActiveCharacter(12)" onmouseover="GetCharacterName(12)">
                 </div>
                 <div class="character-button">
                     <img class="icon" src="../static/assets/DemonSlayer/Minami/Minami.jpg" alt="Minami"
-                        onclick="ChangeActiveCharacter(13)">
+                        onclick="ChangeActiveCharacter(13)" onmouseover="GetCharacterName(13)">
                 </div>
                 <div class="character-button">
                     <img class="icon" src="../static/assets/DemonSlayer/Klaus/Klaus.jpg" alt="Klaus"
-                        onclick="ChangeActiveCharacter(14)">
+                        onclick="ChangeActiveCharacter(14)" onmouseover="GetCharacterName(14)">
                 </div>
             </div>
-            <div>
-                <h1 class="character-name-popup">aaaaaaaaaaaaaaa</h1>
+            <div class="bar"></div>
+            <div class="right-container" style="width: 45%;">
+                <h1 class="nav-name" id="navNameHandler">???</h1>
+            </div>
+            <div class="bar"></div>
+            <div class="exit-div">
+                <a href="../index.html">
+                    <h1>Voltar</h1>
+                </a>
             </div>
         </nav>
     </header>
- 
+
     <div class="main-char">
         <div class="char-status">
 
         </div>
-        <div class="char-info">
-            <div class="portrait">
-                <img class="foto" id="portraitHandler" src="../static/assets/MainPages/character.png" alt="">
-            </div>
-            <h1 class="name" id="nameHandler">???</h1>
-            <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
-            <div class="song-div">
-                    <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt=""> <div class="bar"></div>
+        <div class="char-right">
+            <div class="char-info">
+                <div class="portrait">
+                    <img class="foto" id="portraitHandler" src="../static/assets/MainPages/character.png" alt="">
+                </div>
+                <h1 class="name" id="nameHandler">???</h1>
+                <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
+                <div class="song-div">
+                    <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt="">
+                    <div class="bar"></div>
                     <h1 class="songName" id="songNameHandler">???</h1>
+                </div>
+            </div>
+            <div class="char-main-stats">
+                <h1>Status</h1>
             </div>
         </div>
-    </div>
 
 </body>
 

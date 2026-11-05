@@ -12,15 +12,27 @@
 <body>
     <header>
         <nav class="nav">
-            <div class="character-button">
-                <img class="icon" src="../static/assets/DemonSlayer/Minami/Minami.jpg" alt="Minami"
-                    onclick="ChangeActiveCharacter(13)">
-                <div class="character-name-popup">Minami</div>
+            <div class="carousel" id="carouselHandler" style="width: 12%;">
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/DemonSlayer/Minami/Minami.jpg" alt="Minami"
+                        onclick="ChangeActiveCharacter(13)" onmouseover="GetCharacterName(13)">
+                    <div class="character-name-popup">Minami</div>
+                </div>
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/DemonSlayer/Klaus/Klaus.jpg" alt="Klaus"
+                        onclick="ChangeActiveCharacter(14)" onmouseover="GetCharacterName(14)">
+                    <div class="character-name-popup">Klaus</div>
+                </div>
             </div>
-            <div class="character-button">
-                <img class="icon" src="../static/assets/DemonSlayer/Klaus/Klaus.jpg" alt="Klaus"
-                    onclick="ChangeActiveCharacter(14)">
-                <div class="character-name-popup">Klaus</div>
+            <div class="bar"></div>
+            <div class="right-container" style="width: 73%;">
+                <h1 class="nav-name" id="navNameHandler">???</h1>
+            </div>
+            <div class="bar"></div>
+            <div class="exit-div">
+                <a href="../index.html">
+                    <h1>Voltar</h1>
+                </a>
             </div>
     </header>
 
@@ -35,8 +47,9 @@
             <h1 class="name" id="nameHandler">???</h1>
             <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
             <div class="song-div">
-                    <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt=""> <div class="bar"></div>
-                    <h1 class="songName" id="songNameHandler">???</h1>
+                <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt="">
+                <div class="bar"></div>
+                <h1 class="songName" id="songNameHandler">???</h1>
             </div>
         </div>
     </div>

@@ -17,30 +17,42 @@
 <body>
     <header>
         <nav class="nav">
-            <div class="character-button">
-                <img class="icon" src="../static/assets/Singularity/Himeko/Himeko.png" alt="Himeko"
-                    onclick="ChangeActiveCharacter(7)">
-                <div class="character-name-popup">Himeko</div>
+            <div class="carousel" id="carouselHandler" style="width: 30%;">
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/Singularity/Himeko/Himeko.png" alt="Himeko"
+                        onclick="ChangeActiveCharacter(7)" onmouseover="GetCharacterName(7)">
+                    <div class="character-name-popup">Himeko</div>
+                </div>
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/Singularity/Ayame&Yame/Ayame.jpg" alt="Ayame"
+                        onclick="ChangeActiveCharacter(8)" onmouseover="GetCharacterName(8)">
+                    <div class="character-name-popup">Ayame</div>
+                </div>
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/Singularity/Ayame&Yame/Yame.jpg" alt="Yame"
+                        onclick="ChangeActiveCharacter(9)" onmouseover="GetCharacterName(9)">
+                    <div class="character-name-popup">Yame-chan</div>
+                </div>
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/Singularity/Ember/Ember.jpg" alt="Ember"
+                        onclick="ChangeActiveCharacter(10)" onmouseover="GetCharacterName(10)">
+                    <div class="character-name-popup">Ember</div>
+                </div>
+                <div class="character-button">
+                    <img class="icon" src="../static/assets/Singularity/Caelus/Caelus.png" alt="Caelus"
+                        onclick="ChangeActiveCharacter(11)" onmouseover="GetCharacterName(11)">
+                    <div class="character-name-popup">Caelus</div>
+                </div>
             </div>
-            <div class="character-button">
-                <img class="icon" src="../static/assets/Singularity/Ayame&Yame/Ayame.jpg" alt="Ayame"
-                    onclick="ChangeActiveCharacter(8)">
-                <div class="character-name-popup">Ayame</div>
+            <div class="bar"></div>
+            <div class="right-container" style="width: 55%;">
+                <h1 class="nav-name" id="navNameHandler">???</h1>
             </div>
-            <div class="character-button">
-                <img class="icon" src="../static/assets/Singularity/Ayame&Yame/Yame.jpg" alt="Yame"
-                    onclick="ChangeActiveCharacter(9)">>
-                <div class="character-name-popup">Yame-chan</div>
-            </div>
-            <div class="character-button">
-                <img class="icon" src="../static/assets/Singularity/Ember/Ember.jpg" alt="Ember"
-                    onclick="ChangeActiveCharacter(10)">
-                <div class="character-name-popup">Ember</div>
-            </div>
-            <div class="character-button">
-                <img class="icon" src="../static/assets/Singularity/Caelus/Caelus.png" alt="Caelus"
-                    onclick="ChangeActiveCharacter(11)">
-                <div class="character-name-popup">Caelus</div>
+            <div class="bar"></div>
+            <div class="exit-div">
+                <a href="../index.html">
+                    <h1>Voltar</h1>
+                </a>
             </div>
         </nav>
     </header>
@@ -56,8 +68,9 @@
             <h1 class="name" id="nameHandler">???</h1>
             <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
             <div class="song-div">
-                    <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt=""> <div class="bar"></div>
-                    <h1 class="songName" id="songNameHandler">???</h1>
+                <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt="">
+                <div class="bar"></div>
+                <h1 class="songName" id="songNameHandler">???</h1>
             </div>
         </div>
     </div>
