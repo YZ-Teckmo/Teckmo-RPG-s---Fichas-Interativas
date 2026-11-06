@@ -58,7 +58,7 @@
                 <div>
                     <h1 class="bar-title">Vida</h1>
                     <div class="bar-container">
-                        <div class="bar-fill-health"></div>
+                        <div class="bar-fill-health" id="barHealth"></div>
                         <div class="bar-text">
                             <input class="current-pos" type="number">
                             /
@@ -68,7 +68,7 @@
 
                     <h1 class="bar-title">Estamina</h1>
                     <div class="bar-container">
-                        <div class="bar-fill-stamina"></div>
+                        <div class="bar-fill-stamina" id="barStamina"></div>
                         <div class="bar-text">
                             <input class="current-ene" type="number">
                             /
@@ -78,7 +78,7 @@
 
                     <h1 class="bar-title">Sanidade</h1>
                     <div class="bar-container">
-                        <div class="bar-fill-sanity"></div>
+                        <div class="bar-fill-sanity" id="barSanity"></div>
                         <div class="bar-text">
                             <input class="current-ene" type="number">
                             /
@@ -89,9 +89,10 @@
                     <h1 class="bar-title">Medidor Espiritual</h1>
                     <div class="bar-container-gauge">
                         <div class="bar-text">
-                            <input class="current-ene" id="curGauge" oninput="CalcGauge()" type="number">
+                            <input class="current-ene" id="curGauge"
+                                oninput="barGauge.style.width = Calc(curGauge, maxGauge)" type="number">
                             /
-                            <input class="max-ene" id="maxGauge" oninput="CalcGauge()" type="number">
+                            <input class="max-ene" id="maxGauge" type="number">
                         </div>
                         <div class="bar-fill-gauge" id="barGauge"></div>
                         <div class="bar-container-fill"></div>

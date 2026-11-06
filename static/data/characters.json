@@ -124,6 +124,24 @@
             "blessing": {
                 "name": "Nenhuma",
                 "color": "Branca"
+            },
+            "stats": {
+                "health": {
+                    "current": 190,
+                    "max": 225
+                },
+                "stamina": {
+                    "current": 20,
+                    "max": 80
+                },
+                "mana": {
+                    "current": 5,
+                    "max": 5
+                },
+                "sanity": {
+                    "current": 120,
+                    "max": 125
+                }
             }
         },
         {
@@ -142,6 +160,24 @@
             "blessing": {
                 "name": "???",
                 "color": "???"
+            },
+            "stats": {
+                "health": {
+                    "current": 50,
+                    "max": 100
+                },
+                "stamina": {
+                    "current": 50,
+                    "max": 100
+                },
+                "mana": {
+                    "current": 50,
+                    "max": 100
+                },
+                "sanity": {
+                    "current": 50,
+                    "max": 100
+                }
             }
         },
         {

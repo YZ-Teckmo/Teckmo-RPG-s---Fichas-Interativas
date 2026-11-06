@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+:root {
+    --character-font: 'Poppins', monospace;
+    --back-size: 2px;
+    --ayame-bars-color: ;
+    --bar-background: url("");
+}
+
+h1 {
+    font-family: var(--character-font);
+}
+
+.exit-div h1 {
+    margin-top: var(--back-size);
+}
+
+.bar-text input {
+    font-family: var(--character-font);
+}
+
+.bar-container-affect {
+    margin: 2px;
+    position: relative;
+    width: 300px;
+    height: 70px;
+    background: var(--bar-background) no-repeat;
+    background-size: contain;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.bar-fill-ayame {
+    position: absolute;
+    height: 56px;
+    width: 100%;
+    padding-left: 60px;
+    background-color: var(--ayame-bars-color);
+    transition: width .25s, background-color 0.5s ease;
+    z-index: -1;
+}

@@ -6,6 +6,7 @@
     <meta name="viewpoint" content="with=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/mainTheme.css">
     <link rel="stylesheet" href="../static/css/characterPage.css">
+    <link rel="stylesheet" href="../static/css/AyamePage.css">
     <title>??? - ??? | Deyvid Fichas de RPG</title>
 
     <link rel="preload" as="image" href="../static/assets/Singularity/Himeko/background.jpg">
@@ -51,7 +52,7 @@
             <div class="bar"></div>
             <div class="exit-div">
                 <a href="../index.html">
-                    <h1>Voltar</h1>
+                    <h1 class="back">Voltar</h1>
                 </a>
             </div>
         </nav>
@@ -61,19 +62,71 @@
         <div class="char-status">
 
         </div>
-        <div class="char-info">
-            <div class="portrait">
-                <img class="foto" id="portraitHandler" src="../static/assets/MainPages/character.png" alt="">
+        <div class="char-right">
+            <div class="char-info">
+                <div class="portrait">
+                    <img class="foto" id="portraitHandler" src="../static/assets/MainPages/character.png" alt="">
+                </div>
+                <h1 class="name" id="nameHandler">???</h1>
+                <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
+                <div class="song-div">
+                    <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt="">
+                    <div class="bar"></div>
+                    <h1 class="songName" id="songNameHandler">???</h1>
+                </div>
+                <h1 class="absolute" id="blessingNameHandler">Benção: ???</h1>
+                <h1 class="absolute-type" id="blessingColorHandler">Cor: ???</h1>
             </div>
-            <h1 class="name" id="nameHandler">???</h1>
-            <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
-            <div class="song-div">
-                <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt="">
-                <div class="bar"></div>
-                <h1 class="songName" id="songNameHandler">???</h1>
+            <div class="char-main-stats">
+                <h1>Status</h1>
+                <div id="allBarsHandler">
+                    <h1 class="bar-title">Vida</h1>
+                    <div class="bar-container" data-name="health">
+                        <div class="bar-fill"></div>
+                        <div class="bar-text">
+                            <input class="current" oninput="allBars.health.SetCurValues()" type="number"
+                                autocomplete="off">
+                            /
+                            <input class="max" oninput="allBars.health.SetCurValues()" type="number" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <h1 class="bar-title">Estamina</h1>
+                    <div class="bar-container" data-name="stamina">
+                        <div class="bar-fill"></div>
+                        <div class="bar-text">
+                            <input class="current" type="number"
+                                oninput="allBars.stamina.SetCurValues(), GetBarIcon(allBars.stamina.percent)"
+                                autocomplete="off">
+                            /
+                            <input class="max" type="number" oninput="allBars.stamina.SetCurValues()"
+                                autocomplete="off">
+                        </div>
+                    </div>
+
+                    <h1 class="bar-title">Mana</h1>
+                    <div class="bar-container" data-name="mana">
+                        <div class="bar-fill"></div>
+                        <div class="bar-text">
+                            <input class="current" type="number" oninput="allBars.mana.SetCurValues()"
+                                autocomplete="off">
+                            /
+                            <input class="max" type="number" oninput="allBars.mana.SetCurValues()" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <h1 class="bar-title">Sanidade</h1>
+                    <div class="bar-container" data-name="sanity">
+                        <div class="bar-fill"></div>
+                        <div class="bar-text">
+                            <input class="current" type="number" oninput="allBars.sanity.SetCurValues()"
+                                autocomplete="off">
+                            /
+                            <input class="max" type="number" oninput="allBars.sanity.SetCurValues()" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h1 class="absolute" id="blessingNameHandler">Benção: ???</h1>
-            <h1 class="absolute-type" id="blessingColorHandler">Cor: ???</h1>
         </div>
     </div>
 

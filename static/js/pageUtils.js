@@ -12,13 +12,23 @@ const blessingNameHandler = document.getElementById("blessingNameHandler")
 const blessingColorHandler = document.getElementById("blessingColorHandler")
 const nacionalityHandler = document.getElementById("nacionalityHandler")
 const corpHandler = document.getElementById("corpHandler")
+const allBarsHandler = document.getElementById("allBarsHandler")
+
+
 const curGauge = document.getElementById("curGauge")
 const maxGauge = document.getElementById("maxGauge")
 const barGauge = document.getElementById("barGauge")
 
+
 // ======= Variaveis =======
 let transition = false
 let allCharacters = []
+let allBars = []
+let barClass = false
+
+let allTitles = allBarsHandler.querySelectorAll(".bar-title")
+let allContainers = allBarsHandler.querySelectorAll(".bar-container")
+let allFills = allBarsHandler.querySelectorAll(".bar-fill")
 
 // ======= Classes =======
 class Character {
@@ -33,7 +43,7 @@ class Character {
         this.color = color
         this.themeSong = new ThemeSong()
 
-        if (rpg == 'Singularity') {
+        if (this.rpg == "Singularity") {
             this.blessing = new Blessing()
             this.stats = new SingularityStats()
         }
@@ -56,11 +66,24 @@ class Skill {
 }
 
 class SingularityStats {
-    constructor(health, stamina, singularity, sanity, strength, dexterity, control, intelligence, presence, resilience, luck) {
-        this.health = health
-        this.stamina = stamina
-        this.singularity = singularity
-        this.sanity = sanity
+    constructor(current, max, strength, dexterity, control, intelligence, presence, resilience, luck) {
+        this.health = {
+            current: current,
+            max: max
+        }
+        this.stamina = {
+            current: current,
+            max: max
+        }
+        this.mana = {
+            current: current,
+            max: max
+        }
+        this.sanity = {
+            current: current,
+            max: max
+        }
+
         this.strength = strength
         this.dexterity = dexterity
         this.control = control
@@ -88,10 +111,10 @@ class DumpWorldStats {
 }
 
 class LobotomyStats {
-    constructor(health, sanity, pe, fortitude, prudence, temperance, justice) {
+    constructor(health, sanity, stamina, fortitude, prudence, temperance, justice) {
         this.health = health
         this.sanity = sanity
-        this.pe = pe
+        this.stamina = stamina
         this.fortitude = fortitude
         this.prudence = prudence
         this.temperance = temperance
@@ -145,6 +168,37 @@ class ThemeSong {
     }
 }
 
+class Bars {
+    constructor(element, character) {
+        this.element = element
+        this.name = element.dataset.name
+        this.stat = character.stats[this.name]
+
+        this.cur = this.stat.current
+        this.max = this.stat.max
+
+        this.fill = element.querySelector(".bar-fill, .bar-fill-ayame")
+
+        this.Update()
+    }
+
+    get percent() {
+        return (this.cur / this.max) * 100
+    }
+
+    SetCurValues() {
+        this.cur = Number(this.element.querySelector(".current").value)
+        this.max = Number(this.element.querySelector(".max").value)
+        this.Update()
+    }
+
+    Update() {
+        this.fill.style.width = this.percent + "%"
+        this.element.querySelector(".current").value = this.cur
+        this.element.querySelector(".max").value = this.max
+    }
+}
+
 // ======= Execuções Básicas =======
 carouselHandler.addEventListener('wheel', (evt) => {
     evt.preventDefault()
@@ -185,6 +239,12 @@ function GetActiveCharacter() {
             portraitHandler.src = character.portrait
             nameHandler.innerText = character.name
             titleHandler.innerText = `"${character.title}"`
+            ChangeBackground(character.background)
+
+            document.querySelectorAll(".bar-container, .bar-container-affect").forEach((el) => {
+                const bar = new Bars(el, character)
+                allBars[bar.name] = bar
+            })
 
             if (character.rpg === "DumpWorld") {
                 absoluteNameHandler.innerText = "Absoluto: " + character.absolute.name
@@ -201,7 +261,40 @@ function GetActiveCharacter() {
                 corpHandler.innerText = "Corporação: " + character.lobInfo.corp
             }
 
-            ChangeBackground(character.background)
+            if (character.id === 8) {
+                root.style.setProperty("--character-font", `'Pixelify Sans', monospace`)
+                root.style.setProperty("--back-size", "8px")
+
+                allTitles[0].innerText = "Vida"
+
+                allTitles[1].innerText = "Afeto"
+                allContainers[1].className = "bar-container-affect"
+                allFills[1].className = "bar-fill-ayame"
+                GetBarIcon(allBars.stamina.percent)
+
+                allTitles[2].innerText = "Determinação"
+
+                allTitles[3].innerText = "Magicalização"
+            }
+            else {
+                root.style.setProperty("--character-font", `'Poppins', monospace`)
+                root.style.setProperty("--back-size", "2px")
+
+                allTitles[0].innerText = "Vida"
+
+                allTitles[1].innerText = "Stamina"
+                allContainers[1].className = "bar-container"
+                allFills[1].className = "bar-fill"
+
+                if (character.rpg == "DumpWorld") {
+                    allTitles[2].innerText = "Mana"
+                }
+                else {
+                    allTitles[2].innerText = "Singularidade"
+                }
+
+                allTitles[3].innerText = "Sanidade"
+            }
         }
     }
 }
@@ -233,11 +326,6 @@ function ChangeBackground(background) {
     transition = false
 }
 
-function CalcGauge() {
-    let gaugePercent = (curGauge.value / maxGauge.value) * 100
-    barGauge.style.width = gaugePercent + "%"
-}
-
 function ReleaseGauge() {
     if (barGauge.width <= "100%") {
         root.style.setProperty("--spirit-on", "0")
@@ -253,5 +341,20 @@ function ReleaseGauge() {
     else {
         root.style.setProperty("--spirit-on", "1")
         root.style.setProperty("--gauge-fill", `url("../assets/DemonSlayer/Klaus/SpiritGauge/Fill3.png")`)
+    }
+}
+
+function GetBarIcon(bar) {
+    if (bar <= "20") {
+        root.style.setProperty("--bar-background", `url("../assets/Singularity/Ayame&Yame/AyameBars/Affect/EmptyAffectBar.png")`)
+        root.style.setProperty("--ayame-bars-color", "db0f0f")
+    }
+    else if (bar >= "20" && bar <= "80") {
+        root.style.setProperty("--bar-background", `url("../assets/Singularity/Ayame&Yame/AyameBars/Affect/MidAffectBar.png")`)
+        root.style.setProperty("--ayame-bars-color", "33c528")
+    }
+    else {
+        root.style.setProperty("--bar-background", `url("../assets/Singularity/Ayame&Yame/AyameBars/Affect/FullAffectBar.png")`)
+        root.style.setProperty("--ayame-bars-color", "db0f0f")
     }
 }
