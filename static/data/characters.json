@@ -9,13 +9,14 @@
             "portrait": "../static/assets/DumpWorld/Teckmo/Teckmo.png",
             "background": "../assets/DumpWorld/Teckmo/background.png",
             "color": "60, 115, 199",
+            "level": 200,
             "themeSong": {
                 "name": "Hopes and Dreams | TobyFox",
                 "link": "wbO3p7_Mf30"
             },
-            "absolute": {
-                "name": "Vazio",
-                "type": "Vazio"
+            "baseInfo": {
+                "info1": "Vazio",
+                "info2": "Vazio"
             },
             "stats": {
                 "health": {
@@ -45,13 +46,14 @@
             "portrait": "../static/assets/DumpWorld/Zyreph/Zyreph.jpg",
             "background": "../assets/DumpWorld/Zyreph/Background.png",
             "color": "199, 183, 60",
+            "level": 200,
             "themeSong": {
                 "name": "Mr. Showtime | Hitoshizuku",
-                "link": "https://youtu.be/-W8WjGJYASw?si=ouLb8YTaWsRoKpFs"
+                "link": "-W8WjGJYASw"
             },
-            "absolute": {
-                "name": "Sorte",
-                "type": "Interno"
+            "baseInfo": {
+                "info1": "Sorte",
+                "info2": "Interno"
             },
             "stats": {
                 "health": {
@@ -83,11 +85,11 @@
             "color": "199, 183, 60",
             "themeSong": {
                 "name": "Hopes and Dreams | TobyFox",
-                "link": "https://youtu.be/wbO3p7_Mf30?si=-byuD1YawQ1Wjx-z"
+                "link": "-byuD1YawQ1Wjx-z"
             },
-            "absolute": {
-                "name": "Vazio",
-                "type": "Vazio"
+            "baseInfo": {
+                "info1": "Vazio",
+                "info2": "Vazio"
             }
         },
         {
@@ -99,13 +101,14 @@
             "portrait": "../static/assets/DumpWorld/Mizuki/Mizuki.jpg",
             "background": "../assets/DumpWorld/Mizuki/background.jpg",
             "color": "157, 115, 240",
+            "level": 100,
             "themeSong": {
                 "name": "Bake no Hana | Nakiso",
-                "link": "https://youtu.be/B3C_VB8b2So?si=vOvGjqq8SBoMaE0F"
+                "link": "B3C_VB8b2So"
             },
-            "absolute": {
-                "name": "Vazio",
-                "type": "Vazio"
+            "baseInfo": {
+                "info1": "Vazio",
+                "info2": "Vazio"
             },
             "stats": {
                 "health": {
@@ -135,13 +138,14 @@
             "portrait": "../static/assets/DumpWorld/Raven/Raven.jpg",
             "background": "../assets/DumpWorld/Raven/backrground.jpg",
             "color": "219, 20, 56",
+            "level": 200,
             "themeSong": {
                 "name": "Confession | Naisho no Piasu",
-                "link": "https://youtu.be/Ficg3iAOUp8?si=AoC3mYn3e0rAaem-"
+                "link": "Ficg3iAOUp8"
             },
-            "absolute": {
-                "name": "Superposição",
-                "type": "???"
+            "baseInfo": {
+                "info1": "Superposição",
+                "info2": "???"
             },
             "stats": {
                 "health": {
@@ -171,13 +175,14 @@
             "portrait": "../static/assets/DumpWorld/Vein/Vein.jpg",
             "background": "../assets/DumpWorld/Vein/background.png",
             "color": "199, 183, 60",
+            "level": 100,
             "themeSong": {
                 "name": "Glitter in the Sky | Noah",
-                "link": "https://youtu.be/Q44sWuCh0yE?si=jPp9RGxM6kJv6gfW"
+                "link": "Q44sWuCh0yE"
             },
-            "absolute": {
-                "name": "Treino",
-                "type": "Externo"
+            "baseInfo": {
+                "info1": "Treino",
+                "info2": "Externo"
             },
             "stats": {
                 "health": {
@@ -207,13 +212,14 @@
             "portrait": "../static/assets/Singularity/Himeko/Himeko.png",
             "background": "../assets/Singularity/Himeko/background.jpg",
             "color": "79, 23, 143",
+            "level": 4,
             "themeSong": {
                 "name": "X - Hexatombe | Raging Sea",
-                "link": "https://youtu.be/e96-RPc9meI?si=U6J-4_K1lMCXC-iM"
+                "link": "e96-RPc9meI"
             },
-            "blessing": {
-                "name": "Nenhuma",
-                "color": "Branca"
+            "baseInfo": {
+                "info1": "Nenhuma",
+                "info2": "Branca"
             },
             "stats": {
                 "health": {
@@ -243,13 +249,14 @@
             "portrait": "../static/assets/Singularity/Ayame&Yame/Ayame.jpg",
             "background": "../assets/Singularity/Ayame&Yame/AyameBackground.png",
             "color": "199, 197, 197",
+            "level": 10,
             "themeSong": {
                 "name": "Propose | Naisho no Piasu",
-                "link": "https://youtu.be/SIiHOrmTiOs?si=Xx0mgNjVRdFXPFxg"
+                "link": "ST_AJmY_Tcc"
             },
-            "blessing": {
-                "name": "???",
-                "color": "???"
+            "baseInfo": {
+                "info1": "???",
+                "info2": "???"
             },
             "stats": {
                 "health": {
@@ -279,13 +286,14 @@
             "portrait": "../static/assets/Singularity/Ayame&Yame/Yame.jpg",
             "background": "../assets/Singularity/Ayame&Yame/YameBackground.png",
             "color": "156, 245, 255",
+            "level": 10,
             "themeSong": {
                 "name": "Retry Now | Nakiso",
-                "link": "https://youtu.be/9RcPJBj0nFY?si=AoaQLi6ZW3IW8gGc"
+                "link": "9RcPJBj0nFY"
             },
-            "blessing": {
-                "name": "???",
-                "color": "???"
+            "baseInfo": {
+                "info1": "???",
+                "info2": "???"
             },
             "stats": {
                 "health": {
@@ -315,13 +323,14 @@
             "portrait": "../static/assets/Singularity/Ember/Ember.jpg",
             "background": "../assets/Singularity/Ember/background.png",
             "color": "217, 26, 26",
+            "level": 4,
             "themeSong": {
                 "name": "Fire!! | Jamie Paige",
-                "link": "https://youtu.be/z_Lf71aI0Ng?si=lSfoIbIThTtTiuFc"
+                "link": "z_Lf71aI0Ng"
             },
-            "blessing": {
-                "name": "Phantom Arsenal",
-                "color": "Vermelha"
+            "baseInfo": {
+                "info1": "Phantom Arsenal",
+                "info2": "Vermelha"
             },
             "stats": {
                 "health": {
@@ -351,13 +360,14 @@
             "portrait": "../static/assets/Singularity/Caelus/Caelus.png",
             "background": "../assets/Singularity/Caelus/Background.jpg",
             "color": "235, 211, 75",
+            "level": 4,
             "themeSong": {
                 "name": "CATaclysm | BitFox",
-                "link": "https://youtu.be/A5THcAb2jLU?si=Q78iIVohUHs26cwM"
+                "link": "A5THcAb2jLU"
             },
-            "blessing": {
-                "name": "HeavenLock",
-                "color": "Amarela"
+            "baseInfo": {
+                "info1": "HeavenLock",
+                "info2": "Amarela"
             },
             "stats": {
                 "health": {
@@ -387,13 +397,28 @@
             "portrait": "../static/assets/Lobotomy/Vex/Vex.jpg",
             "background": "../assets/Lobotomy/Vex/background.png",
             "color": "96, 108, 240",
+            "level": "I",
             "themeSong": {
                 "name": "It Go | AnswearingMachine",
-                "link": "https://youtu.be/FAIz9Ok4JSs?si=RmbiuJauhgWBIcLZ"
+                "link": "FAIz9Ok4JSs"
             },
-            "lobInfo": {
-                "nacionality": "MultiCrack Office",
-                "corp": "W Corporation"
+            "baseInfo": {
+                "info1": "MultiCrack Office",
+                "info2": "W Corporation"
+            },
+            "stats": {
+                "health": {
+                    "current": 31,
+                    "max": 31
+                },
+                "sanity": {
+                    "current": 47,
+                    "max": 51
+                },
+                "stamina": {
+                    "current": 17,
+                    "max": 17
+                }
             }
         },
         {
@@ -405,9 +430,28 @@
             "portrait": "../static/assets/DemonSlayer/Minami/Minami.jpg",
             "background": "../assets/DemonSlayer/Minami/background.jpg",
             "color": "140, 52, 227",
+            "level": "0",
             "themeSong": {
                 "name": "Nenhuma",
                 "link": ""
+            },
+            "baseInfo": {
+                "info1": "Japão",
+                "info2": "Veneno"
+            },
+            "stats": {
+                "health": {
+                    "current": 70,
+                    "max": 70
+                },
+                "stamina": {
+                    "current": 100,
+                    "max": 100
+                },
+                "sanity": {
+                    "current": 50,
+                    "max": 50
+                }
             }
         },
         {
@@ -419,9 +463,28 @@
             "portrait": "../static/assets/DemonSlayer/Klaus/Klaus.jpg",
             "background": "../assets/DemonSlayer/Klaus/background.png",
             "color": "103, 78, 167",
+            "level": "0",
             "themeSong": {
-                "name": "Nenhuma",
-                "link": ""
+                "name": "Animal I Have Become | Three Days Grace",
+                "link": "xqds0B_meys"
+            },
+            "baseInfo": {
+                "info1": "Alemanha",
+                "info2": "Dragão"
+            },
+            "stats": {
+                "health": {
+                    "current": 50,
+                    "max": 50
+                },
+                "stamina": {
+                    "current": 120,
+                    "max": 120
+                },
+                "sanity": {
+                    "current": 50,
+                    "max": 50
+                }
             }
         }
     ]

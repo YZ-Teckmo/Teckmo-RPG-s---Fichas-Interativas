@@ -36,24 +36,95 @@
         <div class="char-status">
 
         </div>
-        <div class="char-info">
-            <div class="portrait">
-                <img class="foto" id="portraitHandler" src="../static/assets/MainPages/character.png" alt="">
+        <div class="char-right">
+            <div class="char-info">
+                <div class="portrait">
+                    <img class="foto" id="portraitHandler" src="../static/assets/MainPages/character.png" alt="">
+                </div>
+                <h1 class="name" id="nameHandler">???</h1>
+                <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
+                <h1 class="level" id="levelHandler">Nível: ???</h1>
+                <div class="song-div" onclick="UseSongPopup(1)">
+                    <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt="">
+                    <div class="bar"></div>
+                    <h1 class="songName" id="songNameHandler">???</h1>
+                </div>
+                <h1 class="absolute" id="info1Handler">Nacionalidade: ???</h1>
+                <h1 class="absolute-type" id="info2Handler">Corporação: ???</h1>
             </div>
-            <h1 class="name" id="nameHandler">???</h1>
-            <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
-            <div class="song-div">
-                <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt="">
-                <div class="bar"></div>
-                <h1 class="songName" id="songNameHandler">???</h1>
+            <div class="char-main-stats">
+                <h1>Status</h1>
+                <div id="allBarsHandler">
+                    <h1 class="bar-title">Vida</h1>
+                    <div class="bar-container" data-name="health">
+                        <div class="bar-fill"></div>
+                        <div class="bar-text">
+                            <input class="current" oninput="allBars.health.SetCurValues()" type="number"
+                                autocomplete="off">
+                            <h1>/</h1>
+                            <input class="max" oninput="allBars.health.SetCurValues()" type="number" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <h1 class="bar-title">Sanidade</h1>
+                    <div class="bar-container" data-name="sanity">
+                        <div class="bar-fill"></div>
+                        <div class="bar-text">
+                            <input class="current" type="number" oninput="allBars.sanity.SetCurValues()"
+                                autocomplete="off">
+                            <h1>/</h1>
+                            <input class="max" type="number" oninput="allBars.sanity.SetCurValues()" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <h1 class="bar-title">PE</h1>
+                    <div class="bar-container" data-name="stamina">
+                        <div class="bar-fill"></div>
+                        <div class="bar-text">
+                            <input class="current" type="number" oninput="allBars.stamina.SetCurValues()"
+                                autocomplete="off">
+                            <h1>/</h1>
+                            <input class="max" type="number" oninput="allBars.stamina.SetCurValues()"
+                                autocomplete="off">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h1 class="absolute" id="nacionalityHandler">Nacionalidade: ???</h1>
-            <h1 class="absolute-type" id="corpHandler">Corporação: ???</h1>
+        </div>
+    </div>
+
+    <div class="popup" id="popupHandler">
+        <div class="popup-header">
+            <div class="p-left">
+                <img onclick="UseSongPopup(3)" class="close-btn" id="resizeBtnHandler"
+                    src="../static/assets/MainPages/contract.png"></img>
+            </div>
+            <div class="p-right">
+                <img onclick="UseSongPopup(2)" class="close-btn" src="../static/assets/MainPages/cancel.png"></img>
+            </div>
+        </div>
+        <h1 class="song-title" id="songTitleHandler"></h1>
+        <div class="player-container" id="playerContainerHandler">
+            <div id="playerHandler"></div>
+            <input type="range" orient="vertical" class="volume-bar" value="50" min="0" max="100"
+                onchange="volumeChange(this.value)">
+        </div>
+        <div class="popup-footer">
+            <div class="p-left">
+                <img onclick="playPauseVideo(1)" class="close-btn" id="resizeBtnHandler"
+                    src="../static/assets/MainPages/play.png"></img>
+            </div>
+            <input id="timeSlideHandler" class="time-slide" type="range" value="" min="" max=""
+                onchange="changeVideoTime(this.value)" oninput="currentTimeSlide(this.value)">
+            <div class="p-right">
+                <img onclick="playPauseVideo(2)" class="close-btn" src="../static/assets/MainPages/pause.png"></img>
+            </div>
         </div>
     </div>
 
 </body>
 
 <script src="../static/js/pageUtils.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
 
 </html>

@@ -68,13 +68,14 @@
                 </div>
                 <h1 class="name" id="nameHandler">???</h1>
                 <h1 class="title" id="titleHandler">Selectione um Personagem</h1>
-                <div class="song-div" onclick="OpenCloseSongPopup(1)">
+                <h1 class="level" id="levelHandler">Nível: ???</h1>
+                <div class="song-div" onclick="UseSongPopup(1)">
                     <img class="yt-icon" src="../static/assets/MainPages/youtube.png" alt="">
                     <div class="bar"></div>
                     <h1 class="songName" id="songNameHandler">???</h1>
                 </div>
-                <h1 class="absolute" id="absoluteNameHandler">Absoluto: ???</h1>
-                <h1 class="absolute-type" id="absoluteTypeHandler">Tipo: ???</h1>
+                <h1 class="absolute" id="info1Handler">Absoluto: ???</h1>
+                <h1 class="absolute-type" id="info2Handler">Tipo: ???</h1>
             </div>
             <div class="char-main-stats">
                 <h1>Status</h1>
@@ -131,17 +132,29 @@
     <div class="popup" id="popupHandler">
         <div class="popup-header">
             <div class="p-left">
-                <img onclick="" class="close-btn" id="resizeBtnHandler"
+                <img onclick="UseSongPopup(3)" class="close-btn" id="resizeBtnHandler"
                     src="../static/assets/MainPages/contract.png"></img>
             </div>
             <div class="p-right">
-                <img onclick="OpenCloseSongPopup(2)" class="close-btn"
-                    src="../static/assets/MainPages/cancel.png"></img>
+                <img onclick="UseSongPopup(2)" class="close-btn" src="../static/assets/MainPages/cancel.png"></img>
             </div>
         </div>
         <h1 class="song-title" id="songTitleHandler"></h1>
-        <div id="playerContainerHandler">
+        <div class="player-container" id="playerContainerHandler">
             <div id="playerHandler"></div>
+            <input type="range" orient="vertical" class="volume-bar" value="50" min="0" max="100"
+                onchange="volumeChange(this.value)">
+        </div>
+        <div class="popup-footer">
+            <div class="p-left">
+                <img onclick="playPauseVideo(1)" class="close-btn" id="resizeBtnHandler"
+                    src="../static/assets/MainPages/play.png"></img>
+            </div>
+            <input id="timeSlideHandler" class="time-slide" type="range" value="" min="" max=""
+                onchange="changeVideoTime(this.value)" oninput="currentTimeSlide(this.value)">
+            <div class="p-right">
+                <img onclick="playPauseVideo(2)" class="close-btn" src="../static/assets/MainPages/pause.png"></img>
+            </div>
         </div>
     </div>
 

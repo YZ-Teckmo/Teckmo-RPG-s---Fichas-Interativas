@@ -137,7 +137,7 @@ body.newBack::before {
 
 .char-info {
     width: 350px;
-    height: 320px;
+    height: 340px;
     border-radius: 5px;
     border: 3px solid rgba(var(--character-color), 0.2);
     margin-top: 20px;
@@ -190,6 +190,13 @@ body.newBack::before {
     text-align: center;
 }
 
+.level {
+    width: 100%;
+    margin: 0px;
+    font-size: 14px;
+    text-align: center;
+}
+
 .absolute {
     width: 100%;
     margin: 0px;
@@ -232,7 +239,7 @@ body.newBack::before {
     margin: 0px;
     margin-top: 1px;
     margin-left: 10px;
-    font-size: 14px;
+    font-size: clamp(0.5rem, 1vw, 0.6rem);
     text-align: left;
 }
 
@@ -343,20 +350,31 @@ body.newBack::before {
     position: absolute;
     align-items: center;
     top: 45vh;
-    right: -55vw;
+    right: -50vw;
     transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
     padding: 10px 10px 10px;
     backdrop-filter: blur(20px);
-    visibility: hidden;
-    transition: transform 0.4s, right 0.4s;
+    opacity: 0;
+    transition: transform 0.4s ease, right 0.4s ease, opacity 0.4s ease;
+}
+
+.player-container {
+    margin-left: 25px;
 }
 
 .open-popup {
-    visibility: visible;
+    opacity: 1;
     top: 45vh;
     right: -10vw;
     transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.4s ease, right 0.4s ease, top 0.4s ease;
+}
+
+.minimized-popup {
+    transform: translate(-50%, -50%) scale(0.35);
+    top: 87vh;
+    right: -49vw;
 }
 
 .popup-header {
@@ -365,16 +383,39 @@ body.newBack::before {
     display: flex;
 }
 
-.p-left {
+.popup-header .p-left {
     width: 50%;
     display: flex;
     justify-content: left;
 }
 
-.p-right {
+.popup-header .p-right {
     width: 50%;
     display: flex;
     justify-content: right;
+}
+
+.popup-footer {
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.popup-footer .p-left {
+    width: 10%;
+    display: flex;
+    justify-content: left;
+}
+
+.popup-footer .p-right {
+    width: 10%;
+    display: flex;
+    justify-content: right;
+}
+
+.time-slide {
+    width: 40%;
 }
 
 .close-btn {

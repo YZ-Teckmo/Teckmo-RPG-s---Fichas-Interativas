@@ -2,20 +2,18 @@
 const root = document.documentElement
 const nameHandler = document.getElementById("nameHandler")
 const titleHandler = document.getElementById("titleHandler")
+const levelHandler = document.getElementById("levelHandler")
 const portraitHandler = document.getElementById("portraitHandler")
 const songNameHandler = document.getElementById("songNameHandler")
 const carouselHandler = document.getElementById("carouselHandler")
 const navNameHandler = document.getElementById("navNameHandler")
-const absoluteNameHandler = document.getElementById("absoluteNameHandler")
-const absoluteTypeHandler = document.getElementById("absoluteTypeHandler")
-const blessingNameHandler = document.getElementById("blessingNameHandler")
-const blessingColorHandler = document.getElementById("blessingColorHandler")
-const nacionalityHandler = document.getElementById("nacionalityHandler")
-const corpHandler = document.getElementById("corpHandler")
+const info1Handler = document.getElementById("info1Handler")
+const info2Handler = document.getElementById("info2Handler")
 const allBarsHandler = document.getElementById("allBarsHandler")
 const songTitleHandler = document.getElementById("songTitleHandler")
 const resizeBtnHandler = document.getElementById("resizeBtnHandler")
 const popupHandler = document.getElementById("popupHandler")
+const timeSlideHandler = document.getElementById("timeSlideHandler")
 
 
 const curGauge = document.getElementById("curGauge")
@@ -28,10 +26,12 @@ let transition = false
 let allCharacters = []
 let allBars = []
 let barClass = false
+let popupMinimized = false
 
 // Youtube Player 
 let player
 let songDone = false
+let timeInterval
 
 let allTitles = allBarsHandler.querySelectorAll(".bar-title")
 let allContainers = allBarsHandler.querySelectorAll(".bar-container")
@@ -39,7 +39,7 @@ let allFills = allBarsHandler.querySelectorAll(".bar-fill")
 
 // ======= Classes =======
 class Character {
-    constructor(id, firstName, name, rpg, title, portrait, background, color) {
+    constructor(id, firstName, name, rpg, title, portrait, background, color, level) {
         this.id = id
         this.firstName = firstName
         this.name = name
@@ -48,18 +48,17 @@ class Character {
         this.portrait = portrait
         this.background = background
         this.color = color
+        this.level = level
         this.themeSong = new ThemeSong()
+        this.baseInfo = new BaseInfo()
 
         if (this.rpg == "Singularity") {
-            this.blessing = new Blessing()
             this.stats = new SingularityStats()
         }
         else if (rpg == 'DumpWorld') {
-            this.absolute = new Absolute()
             this.stats = new DumpWorldStats()
         }
         else if (rpg == 'Lobotomy') {
-            this.lobInfo = new LobInfo()
             this.stats = new LobotomyStats()
         }
         else {
@@ -147,24 +146,10 @@ class Expertise {
     //TODO: vsfd petroli, n vou mandar 18 pericias em classes agora
 }
 
-class Absolute {
-    constructor(name, type) {
-        this.name = name
-        this.type = type
-    }
-}
-
-class Blessing {
-    constructor(name, color) {
-        this.name = name
-        this.color = color
-    }
-}
-
-class LobInfo {
-    constructor(nacionality, corp) {
-        this.nacionality = nacionality
-        this.corp = corp
+class BaseInfo {
+    constructor(info1, info2) {
+        this.info1 = info1
+        this.info2 = info2
     }
 }
 
@@ -174,6 +159,7 @@ class ThemeSong {
         this.link = link
     }
 }
+
 
 class Bars {
     constructor(element, character) {
@@ -256,66 +242,77 @@ function GetActiveCharacter() {
             })
 
             if (character.rpg === "DumpWorld") {
-                absoluteNameHandler.innerText = "Absoluto: " + character.absolute.name
-                absoluteTypeHandler.innerText = "Tipo: " + character.absolute.type
+                info1Handler.innerText = "Absoluto: " + character.baseInfo.info1
+                info2Handler.innerText = "Tipo: " + character.baseInfo.info2
+                levelHandler.innerText = "Nível: " + character.level
             }
 
             if (character.rpg === "Singularity") {
-                blessingNameHandler.innerText = "Benção: " + character.blessing.name
-                blessingColorHandler.innerText = "Cor: " + character.blessing.color
+                info1Handler.innerText = "Benção: " + character.baseInfo.info1
+                info2Handler.innerText = "Cor: " + character.baseInfo.info2
+                levelHandler.innerText = "Nível: " + character.level
             }
 
             if (character.rpg === "Lobotomy") {
-                nacionalityHandler.innerText = "Nacionalidade: " + character.lobInfo.nacionality
-                corpHandler.innerText = "Corporação: " + character.lobInfo.corp
+                info1Handler.innerText = "Nacionalidade: " + character.baseInfo.info1
+                info2Handler.innerText = "Corporação: " + character.baseInfo.info2
+                levelHandler.innerText = "Nível: " + character.level
             }
 
-            if (character.id === 8) {
-                root.style.setProperty("--character-font", `'Pixelify Sans', monospace`)
-                root.style.setProperty("--back-size", "8px")
-
-                allTitles[0].innerText = "Vida"
-
-                allTitles[1].innerText = "Afeto"
-                allContainers[1].className = "bar-container-affect"
-                allFills[1].className = "bar-fill-affect"
-                GetAffectIcon(allBars.stamina)
-
-                allTitles[2].innerText = "Determinação"
-                allContainers[2].className = "bar-container-determination"
-                allFills[2].className = "bar-fill-determination"
-                GetDeterminationIcon(allBars.mana)
-
-                allTitles[3].innerText = "Magicalização"
-                allContainers[3].className = "bar-container-magical"
-                allFills[3].className = "bar-fill-magical"
-                GetMagicalIcon(allBars.sanity)
+            if (character.rpg == "DemonSlayer") {
+                info1Handler.innerText = "Nacionalidade: " + character.baseInfo.info1
+                info2Handler.innerText = "Respiração: " + character.baseInfo.info2
+                levelHandler.innerText = "Prestígio: " + character.level
             }
-            else {
-                root.style.setProperty("--character-font", `'Poppins', monospace`)
-                root.style.setProperty("--back-size", "2px")
 
-                allTitles[0].innerText = "Vida"
+            if (character.rpg === "Singularity") {
+                if (character.id === 8) {
+                    root.style.setProperty("--character-font", `'Pixelify Sans', monospace`)
+                    root.style.setProperty("--back-size", "8px")
 
-                allTitles[1].innerText = "Stamina"
-                allContainers[1].className = "bar-container"
-                allFills[1].className = "bar-fill"
+                    allTitles[0].innerText = "Vida"
 
-                if (character.rpg == "DumpWorld") {
-                    allTitles[2].innerText = "Mana"
-                    allContainers[2].className = "bar-container"
-                    allFills[2].className = "bar-fill"
+                    allTitles[1].innerText = "Afeto"
+                    allContainers[1].className = "bar-container-affect"
+                    allFills[1].className = "bar-fill-affect"
+                    GetAffectIcon(allBars.stamina)
 
+                    allTitles[2].innerText = "Determinação"
+                    allContainers[2].className = "bar-container-determination"
+                    allFills[2].className = "bar-fill-determination"
+                    GetDeterminationIcon(allBars.mana)
+
+                    allTitles[3].innerText = "Magicalização"
+                    allContainers[3].className = "bar-container-magical"
+                    allFills[3].className = "bar-fill-magical"
+                    GetMagicalIcon(allBars.sanity)
                 }
                 else {
-                    allTitles[2].innerText = "Singularidade"
-                    allContainers[2].className = "bar-container"
-                    allFills[2].className = "bar-fill"
-                }
+                    root.style.setProperty("--character-font", `'Poppins', monospace`)
+                    root.style.setProperty("--back-size", "2px")
 
-                allTitles[3].innerText = "Sanidade"
-                allContainers[3].className = "bar-container"
-                allFills[1].className = "bar-fill"
+                    allTitles[0].innerText = "Vida"
+
+                    allTitles[1].innerText = "Stamina"
+                    allContainers[1].className = "bar-container"
+                    allFills[1].className = "bar-fill"
+
+                    if (character.rpg == "DumpWorld") {
+                        allTitles[2].innerText = "Mana"
+                        allContainers[2].className = "bar-container"
+                        allFills[2].className = "bar-fill"
+
+                    }
+                    else {
+                        allTitles[2].innerText = "Singularidade"
+                        allContainers[2].className = "bar-container"
+                        allFills[2].className = "bar-fill"
+                    }
+
+                    allTitles[3].innerText = "Sanidade"
+                    allContainers[3].className = "bar-container"
+                    allFills[1].className = "bar-fill"
+                }
             }
         }
     }
@@ -393,14 +390,24 @@ function GetDeterminationIcon(bar) {
     }
 }
 
-function OpenCloseSongPopup(action) {
+function UseSongPopup(action) {
     if (action === 1) {
         popupHandler.classList.add("open-popup")
     }
-    else {
+    else if (action == 2) {
         popupHandler.classList.remove("open-popup")
         if (songDone) {
             player.pauseVideo()
+        }
+    }
+    else if (action == 3) {
+        if (popupMinimized == true) {
+            popupMinimized = false
+            popupHandler.classList.remove("minimized-popup")
+        }
+        else {
+            popupMinimized = true
+            popupHandler.classList.add("minimized-popup")
         }
     }
 }
@@ -427,6 +434,7 @@ function onYouTubeIframeAPIReady() {
 
 function changeVideo(videoID) {
     player.cueVideoById({ videoId: videoID })
+    timeSlideHandler.max = player.getDuration()
     player.pauseVideo()
 }
 
@@ -437,5 +445,34 @@ function onPlayerReady() {
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !songDone) {
         songDone = true
+        timeInterval = setInterval(updateTimeBar, 200)
+    }
+    else {
+        clearInterval(timeInterval)
+    }
+}
+
+function updateTimeBar() {
+    timeSlideHandler.value = player.getCurrentTime()
+}
+
+function changeVideoTime(curTime) {
+    player.currentTimeSliding = false
+    player.seekTo((curTime * player.getDuration()) / 100, true)
+}
+
+function currentTimeSlide() {
+    player.currentTimeSliding = true
+}
+
+function volumeChange(volume) {
+    player.setVolume(volume)
+}
+
+function playPauseVideo(action) {
+    if (action == 1) {
+        player.playVideo()
+    } else {
+        player.pauseVideo()
     }
 }
