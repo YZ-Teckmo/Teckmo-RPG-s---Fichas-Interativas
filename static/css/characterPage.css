@@ -332,3 +332,65 @@ body.newBack::before {
     background-size: contain;
     opacity: var(--spirit-on);
 }
+
+.popup {
+    width: 60vw;
+    height: 70vh;
+    border-radius: 5px;
+    border: 3px solid rgba(var(--character-color), 0.2);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 45vh;
+    right: -55vw;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 10px 10px 10px;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    transition: transform 0.4s, right 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 45vh;
+    right: -10vw;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-header {
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+}
+
+.p-left {
+    width: 50%;
+    display: flex;
+    justify-content: left;
+}
+
+.p-right {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+}
+
+.close-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 0px;
+    border: 0px;
+    left: 80%;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.song-title {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+}

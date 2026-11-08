@@ -11,11 +11,29 @@
             "color": "60, 115, 199",
             "themeSong": {
                 "name": "Hopes and Dreams | TobyFox",
-                "link": "https://youtu.be/wbO3p7_Mf30?si=-byuD1YawQ1Wjx-z"
+                "link": "wbO3p7_Mf30"
             },
             "absolute": {
                 "name": "Vazio",
                 "type": "Vazio"
+            },
+            "stats": {
+                "health": {
+                    "current": 240,
+                    "max": 240
+                },
+                "stamina": {
+                    "current": 10,
+                    "max": 90
+                },
+                "mana": {
+                    "current": 40,
+                    "max": 220
+                },
+                "sanity": {
+                    "current": 100,
+                    "max": 100
+                }
             }
         },
         {
@@ -34,6 +52,24 @@
             "absolute": {
                 "name": "Sorte",
                 "type": "Interno"
+            },
+            "stats": {
+                "health": {
+                    "current": 475,
+                    "max": 475
+                },
+                "stamina": {
+                    "current": 80,
+                    "max": 80
+                },
+                "mana": {
+                    "current": 160,
+                    "max": 220
+                },
+                "sanity": {
+                    "current": 100,
+                    "max": 100
+                }
             }
         },
         {
@@ -70,6 +106,24 @@
             "absolute": {
                 "name": "Vazio",
                 "type": "Vazio"
+            },
+            "stats": {
+                "health": {
+                    "current": 50,
+                    "max": 50
+                },
+                "stamina": {
+                    "current": 50,
+                    "max": 50
+                },
+                "mana": {
+                    "current": 190,
+                    "max": 250
+                },
+                "sanity": {
+                    "current": 100,
+                    "max": 100
+                }
             }
         },
         {
@@ -88,6 +142,24 @@
             "absolute": {
                 "name": "Superposição",
                 "type": "???"
+            },
+            "stats": {
+                "health": {
+                    "current": 300,
+                    "max": 300
+                },
+                "stamina": {
+                    "current": 5,
+                    "max": 5
+                },
+                "mana": {
+                    "current": 295,
+                    "max": 295
+                },
+                "sanity": {
+                    "current": 100,
+                    "max": 100
+                }
             }
         },
         {
@@ -106,6 +178,24 @@
             "absolute": {
                 "name": "Treino",
                 "type": "Externo"
+            },
+            "stats": {
+                "health": {
+                    "current": 200,
+                    "max": 200
+                },
+                "stamina": {
+                    "current": 195,
+                    "max": 195
+                },
+                "mana": {
+                    "current": 5,
+                    "max": 5
+                },
+                "sanity": {
+                    "current": 100,
+                    "max": 100
+                }
             }
         },
         {
@@ -196,6 +286,24 @@
             "blessing": {
                 "name": "???",
                 "color": "???"
+            },
+            "stats": {
+                "health": {
+                    "current": 50,
+                    "max": 100
+                },
+                "stamina": {
+                    "current": 50,
+                    "max": 100
+                },
+                "mana": {
+                    "current": 50,
+                    "max": 100
+                },
+                "sanity": {
+                    "current": 50,
+                    "max": 100
+                }
             }
         },
         {
@@ -214,6 +322,24 @@
             "blessing": {
                 "name": "Phantom Arsenal",
                 "color": "Vermelha"
+            },
+            "stats": {
+                "health": {
+                    "current": 80,
+                    "max": 100
+                },
+                "stamina": {
+                    "current": 30,
+                    "max": 120
+                },
+                "mana": {
+                    "current": 20,
+                    "max": 70
+                },
+                "sanity": {
+                    "current": 110,
+                    "max": 110
+                }
             }
         },
         {
@@ -232,6 +358,24 @@
             "blessing": {
                 "name": "HeavenLock",
                 "color": "Amarela"
+            },
+            "stats": {
+                "health": {
+                    "current": 25,
+                    "max": 120
+                },
+                "stamina": {
+                    "current": 35,
+                    "max": 40
+                },
+                "mana": {
+                    "current": 130,
+                    "max": 150
+                },
+                "sanity": {
+                    "current": 80,
+                    "max": 100
+                }
             }
         },
         {

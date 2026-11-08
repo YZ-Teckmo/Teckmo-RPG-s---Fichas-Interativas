@@ -13,6 +13,9 @@ const blessingColorHandler = document.getElementById("blessingColorHandler")
 const nacionalityHandler = document.getElementById("nacionalityHandler")
 const corpHandler = document.getElementById("corpHandler")
 const allBarsHandler = document.getElementById("allBarsHandler")
+const songTitleHandler = document.getElementById("songTitleHandler")
+const resizeBtnHandler = document.getElementById("resizeBtnHandler")
+const popupHandler = document.getElementById("popupHandler")
 
 
 const curGauge = document.getElementById("curGauge")
@@ -25,6 +28,10 @@ let transition = false
 let allCharacters = []
 let allBars = []
 let barClass = false
+
+// Youtube Player 
+let player
+let songDone = false
 
 let allTitles = allBarsHandler.querySelectorAll(".bar-title")
 let allContainers = allBarsHandler.querySelectorAll(".bar-container")
@@ -177,7 +184,7 @@ class Bars {
         this.cur = this.stat.current
         this.max = this.stat.max
 
-        this.fill = element.querySelector(".bar-fill, .bar-fill-ayame")
+        this.fill = element.querySelector(".bar-fill, .bar-fill-affect, .bar-fill-magical, .bar-fill-determination")
 
         this.Update()
     }
@@ -240,8 +247,10 @@ function GetActiveCharacter() {
             nameHandler.innerText = character.name
             titleHandler.innerText = `"${character.title}"`
             ChangeBackground(character.background)
+            changeVideo(character.themeSong.link)
+            songTitleHandler.innerText = character.themeSong.name
 
-            document.querySelectorAll(".bar-container, .bar-container-affect").forEach((el) => {
+            document.querySelectorAll(".bar-container, .bar-container-affect, .bar-container-magical, .bar-container-determination").forEach((el) => {
                 const bar = new Bars(el, character)
                 allBars[bar.name] = bar
             })
@@ -269,12 +278,18 @@ function GetActiveCharacter() {
 
                 allTitles[1].innerText = "Afeto"
                 allContainers[1].className = "bar-container-affect"
-                allFills[1].className = "bar-fill-ayame"
-                GetBarIcon(allBars.stamina.percent)
+                allFills[1].className = "bar-fill-affect"
+                GetAffectIcon(allBars.stamina)
 
                 allTitles[2].innerText = "Determinação"
+                allContainers[2].className = "bar-container-determination"
+                allFills[2].className = "bar-fill-determination"
+                GetDeterminationIcon(allBars.mana)
 
                 allTitles[3].innerText = "Magicalização"
+                allContainers[3].className = "bar-container-magical"
+                allFills[3].className = "bar-fill-magical"
+                GetMagicalIcon(allBars.sanity)
             }
             else {
                 root.style.setProperty("--character-font", `'Poppins', monospace`)
@@ -288,12 +303,19 @@ function GetActiveCharacter() {
 
                 if (character.rpg == "DumpWorld") {
                     allTitles[2].innerText = "Mana"
+                    allContainers[2].className = "bar-container"
+                    allFills[2].className = "bar-fill"
+
                 }
                 else {
                     allTitles[2].innerText = "Singularidade"
+                    allContainers[2].className = "bar-container"
+                    allFills[2].className = "bar-fill"
                 }
 
                 allTitles[3].innerText = "Sanidade"
+                allContainers[3].className = "bar-container"
+                allFills[1].className = "bar-fill"
             }
         }
     }
@@ -326,35 +348,94 @@ function ChangeBackground(background) {
     transition = false
 }
 
-function ReleaseGauge() {
-    if (barGauge.width <= "100%") {
-        root.style.setProperty("--spirit-on", "0")
+function GetAffectIcon(bar) {
+    if (bar.percent <= "30") {
+        root.style.setProperty("--bar-background-affect", `url("../assets/Singularity/Ayame&Yame/AyameBars/Affect/EmptyAffectBar.png")`)
+        root.style.setProperty("--bar-color-affect", "db0f0f")
     }
-    else if (barGauge.width >= "100%" && barGauge.width <= "200%") {
-        root.style.setProperty("--spirit-on", "1")
-        root.style.setProperty("--gauge-fill", `url("../assets/DemonSlayer/Klaus/SpiritGauge/Fill1.png")`)
+    else if (bar.percent > "30" && bar.percent < "70") {
+        root.style.setProperty("--bar-background-affect", `url("../assets/Singularity/Ayame&Yame/AyameBars/Affect/MidAffectBar.png")`)
+        root.style.setProperty("--bar-color-affect", "33c528")
     }
-    else if (barGauge.width >= "200%" && barGauge.width <= "300%") {
-        root.style.setProperty("--spirit-on", "1")
-        root.style.setProperty("--gauge-fill", `url("../assets/DemonSlayer/Klaus/SpiritGauge/Fill2.png")`)
-    }
-    else {
-        root.style.setProperty("--spirit-on", "1")
-        root.style.setProperty("--gauge-fill", `url("../assets/DemonSlayer/Klaus/SpiritGauge/Fill3.png")`)
+    else if (bar.percent >= "70") {
+        root.style.setProperty("--bar-background-affect", `url("../assets/Singularity/Ayame&Yame/AyameBars/Affect/FullAffectBar.png")`)
+        root.style.setProperty("--bar-color-affect", "db0f0f")
     }
 }
 
-function GetBarIcon(bar) {
-    if (bar <= "20") {
-        root.style.setProperty("--bar-background", `url("../assets/Singularity/Ayame&Yame/AyameBars/Affect/EmptyAffectBar.png")`)
-        root.style.setProperty("--ayame-bars-color", "db0f0f")
+function GetMagicalIcon(bar) {
+    if (bar.percent <= "30") {
+        root.style.setProperty("--bar-background-magical", `url("../assets/Singularity/Ayame&Yame/AyameBars/Magicalization/EmptyMagicalizationBar.png")`)
+        root.style.setProperty("--bar-color-magical", "db0f0f")
     }
-    else if (bar >= "20" && bar <= "80") {
-        root.style.setProperty("--bar-background", `url("../assets/Singularity/Ayame&Yame/AyameBars/Affect/MidAffectBar.png")`)
-        root.style.setProperty("--ayame-bars-color", "33c528")
+    else if (bar.percent > "30" && bar.percent < "100") {
+        root.style.setProperty("--bar-background-magical", `url("../assets/Singularity/Ayame&Yame/AyameBars/Magicalization/MidMagicalizationBar.png")`)
+        root.style.setProperty("--bar-color-magical", "33c528")
+    }
+    else if (bar.percent >= "100") {
+        root.style.setProperty("--bar-background-magical", `url("../assets/Singularity/Ayame&Yame/AyameBars/Magicalization/FullMagicalizationBar.png")`)
+        root.style.setProperty("--bar-color-magical", "db0f0f")
+    }
+}
+
+function GetDeterminationIcon(bar) {
+    if (bar.percent <= "20") {
+        root.style.setProperty("--bar-background-determination", `url("../assets/Singularity/Ayame&Yame/AyameBars/Determination/EmptyDeterminationBar.png")`)
+        root.style.setProperty("--bar-color-determination", "db0f0f")
+    }
+    else if (bar.percent > "20" && bar.percent < "80") {
+        root.style.setProperty("--bar-background-determination", `url("../assets/Singularity/Ayame&Yame/AyameBars/Determination/MidDeterminationBar.png")`)
+        root.style.setProperty("--bar-color-determination", "33c528")
+    }
+    else if (bar.percent >= "80") {
+        root.style.setProperty("--bar-background-determination", `url("../assets/Singularity/Ayame&Yame/AyameBars/Determination/FullDeterminationBar.png")`)
+        root.style.setProperty("--bar-color-determination", "db0f0f")
+    }
+}
+
+function OpenCloseSongPopup(action) {
+    if (action === 1) {
+        popupHandler.classList.add("open-popup")
     }
     else {
-        root.style.setProperty("--bar-background", `url("../assets/Singularity/Ayame&Yame/AyameBars/Affect/FullAffectBar.png")`)
-        root.style.setProperty("--ayame-bars-color", "db0f0f")
+        popupHandler.classList.remove("open-popup")
+        if (songDone) {
+            player.pauseVideo()
+        }
+    }
+}
+
+// Youtube Functions
+function onYouTubeIframeAPIReady() {
+    console.log("API running")
+
+    player = new YT.Player("playerHandler", {
+        height: 300,
+        width: 500,
+        videoId: "",
+        playerVars: {
+            playersinline: 1,
+            autoplay: 0,
+            controls: 0
+        },
+        events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange
+        }
+    })
+}
+
+function changeVideo(videoID) {
+    player.cueVideoById({ videoId: videoID })
+    player.pauseVideo()
+}
+
+function onPlayerReady() {
+    console.log("ready")
+}
+
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !songDone) {
+        songDone = true
     }
 }

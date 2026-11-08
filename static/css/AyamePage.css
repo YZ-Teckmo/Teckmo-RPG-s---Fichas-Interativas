@@ -3,8 +3,15 @@
 :root {
     --character-font: 'Poppins', monospace;
     --back-size: 2px;
-    --ayame-bars-color: ;
-    --bar-background: url("");
+
+    --bar-color-affect: ;
+    --bar-background-affect: url("");
+
+    --bar-color-magical: ;
+    --bar-background-magical: url("");
+
+    --bar-color-determination: ;
+    --bar-background-determination: url("");
 }
 
 h1 {
@@ -24,18 +31,63 @@ h1 {
     position: relative;
     width: 300px;
     height: 70px;
-    background: var(--bar-background) no-repeat;
+    background: var(--bar-background-affect) no-repeat;
     background-size: contain;
     border-radius: 5px;
     overflow: hidden;
+    image-rendering: pixelated;
 }
 
-.bar-fill-ayame {
+.bar-container-magical {
+    margin: 2px;
+    position: relative;
+    width: 300px;
+    height: 70px;
+    background: var(--bar-background-magical) no-repeat;
+    background-size: contain;
+    border-radius: 5px;
+    overflow: hidden;
+    image-rendering: pixelated;
+}
+
+.bar-container-determination {
+    margin: 2px;
+    position: relative;
+    width: 300px;
+    height: 70px;
+    background: var(--bar-background-determination) no-repeat;
+    background-size: contain;
+    border-radius: 5px;
+    overflow: hidden;
+    image-rendering: pixelated;
+}
+
+.bar-fill-affect {
     position: absolute;
     height: 56px;
     width: 100%;
     padding-left: 60px;
-    background-color: var(--ayame-bars-color);
+    background-color: var(--bar-color-affect);
+    transition: width .25s, background-color 0.5s ease;
+    z-index: -1;
+}
+
+.bar-fill-magical {
+    position: absolute;
+    height: 56px;
+    width: 100%;
+    padding-left: 60px;
+    background-color: var(--bar-color-magical);
+    transition: width .25s, background-color 0.5s ease;
+    z-index: -1;
+}
+
+.bar-fill-determination {
+    position: absolute;
+    height: 56px;
+    width: 100%;
+    padding-left: 60px;
+    background-color: var(--bar-color-determination);
     transition: width .25s, background-color 0.5s ease;
     z-index: -1;
 }

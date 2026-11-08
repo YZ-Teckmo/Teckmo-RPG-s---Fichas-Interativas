@@ -86,7 +86,7 @@
                         <div class="bar-text">
                             <input class="current" oninput="allBars.health.SetCurValues()" type="number"
                                 autocomplete="off">
-                            /
+                            <h1>/</h1>
                             <input class="max" oninput="allBars.health.SetCurValues()" type="number" autocomplete="off">
                         </div>
                     </div>
@@ -96,9 +96,9 @@
                         <div class="bar-fill"></div>
                         <div class="bar-text">
                             <input class="current" type="number"
-                                oninput="allBars.stamina.SetCurValues(), GetBarIcon(allBars.stamina.percent)"
+                                oninput="allBars.stamina.SetCurValues(), GetAffectIcon(allBars.stamina)"
                                 autocomplete="off">
-                            /
+                            <h1>/</h1>
                             <input class="max" type="number" oninput="allBars.stamina.SetCurValues()"
                                 autocomplete="off">
                         </div>
@@ -108,9 +108,10 @@
                     <div class="bar-container" data-name="mana">
                         <div class="bar-fill"></div>
                         <div class="bar-text">
-                            <input class="current" type="number" oninput="allBars.mana.SetCurValues()"
+                            <input class="current" type="number"
+                                oninput="allBars.mana.SetCurValues(), GetDeterminationIcon(allBars.mana)"
                                 autocomplete="off">
-                            /
+                            <h1>/</h1>
                             <input class="max" type="number" oninput="allBars.mana.SetCurValues()" autocomplete="off">
                         </div>
                     </div>
@@ -119,9 +120,10 @@
                     <div class="bar-container" data-name="sanity">
                         <div class="bar-fill"></div>
                         <div class="bar-text">
-                            <input class="current" type="number" oninput="allBars.sanity.SetCurValues()"
+                            <input class="current" type="number"
+                                oninput="allBars.sanity.SetCurValues(), GetMagicalIcon(allBars.sanity)"
                                 autocomplete="off">
-                            /
+                            <h1>/</h1>
                             <input class="max" type="number" oninput="allBars.sanity.SetCurValues()" autocomplete="off">
                         </div>
                     </div>
@@ -130,8 +132,16 @@
         </div>
     </div>
 
+    <div class="popup">
+
+        <div id="playerContainerHandler">
+            <div class="player" id="playerHandler"></div>
+        </div>
+    </div>
+
 </body>
 
 <script src="../static/js/pageUtils.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
 
 </html>
